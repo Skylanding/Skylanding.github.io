@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<meta property="og:title" content="CSAPP第二章笔记" />
+<meta property="og:description" content="CSAPP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Skylanding.github.io/2022/10/csapp%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%AC%94%E8%AE%B0/" />
+<meta property="article:published_time" content="2022-10-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-10-30T00:00:00+00:00" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CSAPP第二章笔记"/>
+<meta name="twitter:description" content="CSAPP"/>
+<meta name="generator" content="Hugo 0.104.3" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "CSAPP第二章笔记",
+  "url": "https://Skylanding.github.io/2022/10/csapp%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%AC%94%E8%AE%B0/",
+  "wordCount": "1086",
+  "datePublished": "2022-10-30T00:00:00+00:00",
+  "dateModified": "2022-10-30T00:00:00+00:00",
+  "author": {
+    "@type": "Person",
+    "name": "Liyu"
+  },
+  "keywords": "CSAPP, 学习经验",
+  "description": "CSAPP"
+}
+</script>
+
+
+
+    <link rel="canonical" href="https://Skylanding.github.io/2022/10/csapp%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%AC%94%E8%AE%B0/">
+
+    <title>CSAPP第二章笔记 | Liyu&#39;s Page</title>
+
+    
+    <!-- combined, minified CSS -->
+    
+    <link href="https://Skylanding.github.io/css/style.0b72f41a0f22d687d912a8e7c945fc14c7a36daee062380f9fae9958e7d17da6.css" rel="stylesheet" integrity="sha256-C3L0Gg8i1ofZEqjnyUX8FMejba7gYjgPn66ZWOfRfaY=" crossorigin="anonymous">
+    
+
+    <!-- minified Font Awesome for SVG icons -->
+    
+    <script defer src="https://Skylanding.github.io/js/fontawesome.min.a290d22177f491b8a83b0ee7eb739224c57ab052d8fab69d8f52aab860e42027.js" integrity="sha256-opDSIXf0kbioOw7n63OSJMV6sFLY&#43;radj1KquGDkICc=" crossorigin="anonymous"></script>
+
+    <!-- RSS 2.0 feed -->
+    
+
+    
+
+  </head>
+
+  <body>
+
+    
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="https://Skylanding.github.io">Home</a>
+          
+          <a class="nav-link" href="https://example.org" title="">Category</a>
+          
+          
+          <a class="nav-link" href="https://example.org" title="">Tags</a>
+          
+        </nav>
+      </div>
+    </div>
+    
+
+    
+    
+    <header class="blog-header">
+      <div class="container">
+        <h1 class="blog-title" dir="auto"><a href="https://Skylanding.github.io" rel="home">Liyu's Page</a></h1>
+        <p class="lead blog-description" dir="auto">A learner full of 100% enthusiasm for life</p>
+      </div>
+    </header>
+    
+    
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title" dir="auto"><a href="https://Skylanding.github.io/2022/10/csapp%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%AC%94%E8%AE%B0/">CSAPP第二章笔记</a></h2>
+    <p class="blog-post-meta">
+<time datetime="2022-10-30T00:00:00Z">Sun Oct 30, 2022</time>
+ in 
+<span class="fas fa-folder" aria-hidden="true"></span>&nbsp;<a href="/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/" rel="category tag">学习经验</a>
+
+
+<span class="fas fa-tag" aria-hidden="true"></span>&nbsp;<a href="/tags/csapp/" rel="tag">CSAPP</a>
+
+</p>
+  </header>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">//2.61</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">A.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">!~x  
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">B.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">!x    
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">C.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">! ~(x |0xFF)      0xFF -&gt; 00 00 00 FF
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> 0xFF because unsure about the bits of x 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">D.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">int shift_amount = (sizeof(int)-1)&lt;&lt;3;  //to get the number of bits from the highest to the lowest displacement of the int type data
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">int xright = x&gt;&gt;shift_amount; 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">int xmask = xright&amp;0xff;   //All bits are 0 if they comply with the request
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">return !xmask 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">//2.63</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span>include&lt;stdio.h&gt;
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span>include &lt;assert.h&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>unsigned srl(unsigned x, <span style="color:#66d9ef">int</span> k) 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/*Perform shift arithmetically*/</span>
+</span></span><span style="display:flex;"><span>{ 
+</span></span><span style="display:flex;"><span>	unsigned xsra = (<span style="color:#66d9ef">int</span>)x &gt;&gt; k; 
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> w = <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">int</span>) &lt;&lt; <span style="color:#ae81ff">3</span>;  <span style="color:#75715e">//Complete *8 operations</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> s1 = (<span style="color:#66d9ef">int</span>)-<span style="color:#ae81ff">1</span> &lt;&lt; (w - k); <span style="color:#75715e">//There is a small drawback here, refer to the standard answer</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> s2 = ~s1;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> xsra &amp; s2; 
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//如果第一位是1，与上个相同；如果是0，则刚好相反 </span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> sra(<span style="color:#66d9ef">int</span> x, <span style="color:#66d9ef">int</span> k)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> xsrl = (unsigned)x &gt;&gt; k; 
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> w = <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">int</span>) &lt;&lt; <span style="color:#ae81ff">3</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> s1 = (<span style="color:#66d9ef">int</span>)-<span style="color:#ae81ff">1</span> &lt;&lt; (w - k);  <span style="color:#75715e">//There is a small drawback here, refer to the standard answer</span>
+</span></span><span style="display:flex;"><span>    	<span style="color:#66d9ef">int</span> s2 = <span style="color:#ae81ff">1</span> &lt;&lt; (w - <span style="color:#ae81ff">1</span>); 
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> s3 = s1&amp;(! (x &amp; s2) - <span style="color:#ae81ff">1</span>) ;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> xsrl | s3; 
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/*参考答案
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">unsigned srl(unsigned x, int k) {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    /* 算术右移k位 */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    unsigned xrsa = (<span style="color:#66d9ef">int</span>) x &gt;&gt; k;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* 生成低w-k位的掩码 */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    unsigned mask = ~<span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    unsigned tmp = k &amp;&amp; (mask = ((<span style="color:#ae81ff">1</span> &lt;&lt; ((<span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">int</span>) &lt;&lt; <span style="color:#ae81ff">3</span>) - k)) - <span style="color:#ae81ff">1</span>));
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//tmp has no effect whereas &#39;(k&amp;&amp;(..))&#39; takes a examnation on k which means that if k=0, tmp does not exectue the latter operation.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> xrsa &amp; mask;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>unsigned sra(<span style="color:#66d9ef">int</span> x,<span style="color:#66d9ef">int</span> k) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* 逻辑右移k位 */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> xsrl = (unsigned) x &gt;&gt; k;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* 生成高k位的掩码 */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    unsigned mask = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    unsigned tmp = k &amp;&amp; (mask = ~((<span style="color:#ae81ff">1</span> &lt;&lt; ((<span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">int</span>) &lt;&lt; <span style="color:#ae81ff">3</span>) - k))  - <span style="color:#ae81ff">1</span>));
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Attention! The same as above,this operation can exam whether k is 0</span>
+</span></span><span style="display:flex;"><span>    tmp = (x &lt; <span style="color:#ae81ff">0</span>) &amp;&amp; (xsrl = mask | xsrl);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> xsrl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>*/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> main()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	unsigned test_1 = <span style="color:#ae81ff">0x12345678</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> test_2 = <span style="color:#ae81ff">0x12345678</span>;
+</span></span><span style="display:flex;"><span>	unsigned test_3 = <span style="color:#ae81ff">0x87654321</span>; 
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span>	test_4 = <span style="color:#ae81ff">0x87654321</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//printf不能打印srl，sra的结果 ，搜索之后使用断言判断 </span>
+</span></span><span style="display:flex;"><span>	assert(srl(test_1, <span style="color:#ae81ff">3</span>) == test_1 &gt;&gt; <span style="color:#ae81ff">3</span>);
+</span></span><span style="display:flex;"><span>	assert(sra(test_2, <span style="color:#ae81ff">3</span>) == test_2 &gt;&gt; <span style="color:#ae81ff">3</span>); 
+</span></span><span style="display:flex;"><span>	assert(srl(test_3, <span style="color:#ae81ff">3</span>) == test_3 &gt;&gt; <span style="color:#ae81ff">3</span>); 
+</span></span><span style="display:flex;"><span>	assert(sra(test_4, <span style="color:#ae81ff">3</span>) == test_4 &gt;&gt; <span style="color:#ae81ff">3</span>);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//gcc运行之后，如果没有报错说明断言判断程序正确</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">//2.67</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> bad_int_size_is_32()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Set most significant bit(msb)of 32-bit machine</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> set_msb = <span style="color:#ae81ff">1</span>&lt;&lt;<span style="color:#ae81ff">31</span>;
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//Shift past msb of 32-bit word</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> beyond_msb = <span style="color:#ae81ff">1</span>&lt;&lt;<span style="color:#ae81ff">32</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//unsure about the result of this operation,especially on different machine,usually random.For instance, usually -&gt;(k mod 32) or (k &amp;31) </span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> set_msb &amp;&amp; !beyond_msb;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//A.左移的位数为32位时，大于等于 int 所能表示的字节宽度；</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//B.</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> int_size_is_32()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> set_msb = <span style="color:#ae81ff">1</span>&lt;&lt;<span style="color:#ae81ff">31</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> beyond_msb = set_msb&lt;&lt;<span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> set_msb &amp;&amp; !beyond_msb; 
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//C.</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> int_size_is_16()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> s1 = <span style="color:#ae81ff">1</span>&lt;&lt;<span style="color:#ae81ff">15</span>;
+</span></span><span style="display:flex;"><span>	s1&lt;&lt;=<span style="color:#ae81ff">15</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> set_msb = s1&lt;&lt;<span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> beyond_msb =s1&lt;&lt;<span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> set_msb &amp;&amp; !beyond_msb;
+</span></span><span style="display:flex;"><span>} 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//examnation</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> main()
+</span></span><span style="display:flex;"><span>{   assert(int_size_is_32());
+</span></span><span style="display:flex;"><span>	assert(int_size_is_16());
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">//2.71</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span>include&lt;stdio.h&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//A.</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> xbyte(packet_t word, <span style="color:#66d9ef">int</span> byteum)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> (word&gt;&gt;(byteum&lt;&lt;<span style="color:#ae81ff">3</span>))&amp;<span style="color:#ae81ff">0xFF</span>; 
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/*   1.对byteum左移3位，即让指定的字节*8得到位数；
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     2.让word右移8*byte位 ，使得指定的字节处于最低有效字节；
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 3.&amp;0xFF,只保留8位（最低有效字节）；
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	得到的结果是 ：指定的字节右移到编号0 ，但是 1~3均为0，并不是符号拓展。 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//B.</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> ybyte(packet_t word, <span style="color:#66d9ef">int</span> byteum)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> s1 = (<span style="color:#ae81ff">3</span>-byteum)&lt;&lt;<span style="color:#ae81ff">3</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> s2 = (word&lt;&lt;s1);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span>(s2&gt;&gt;<span style="color:#ae81ff">24</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 从最高位再右移24为，属于有符号数的右移，满足符号拓展。</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">//2.73</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span>include&lt;stdio.h&gt;
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span>include&lt;stdlib.h&gt; 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> saturating_add(<span style="color:#66d9ef">int</span> x, <span style="color:#66d9ef">int</span> y)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	 <span style="color:#75715e">//Solution: 将两个正数x,y相加，正溢出符号位变负，返回Tmax; 将两个负数x,y相加，符号位变正，负溢出返回Tmin; </span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> result = x+y;
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//用算术右移来保留符号位，从而判断正负溢出。</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> bias = ( <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">int</span>)&lt;&lt;<span style="color:#ae81ff">3</span> )-<span style="color:#ae81ff">1</span> ; <span style="color:#75715e">//记录算术右移的步数；</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> mark1 = (~(x^y))&gt;&gt;bias;  <span style="color:#75715e">//x,y判断符号位</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> mark2 = (result^y)&gt;&gt;bias; <span style="color:#75715e">// 判断reuslt的符号位是否溢出</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> mark = mark1 &amp; mark2;  <span style="color:#75715e">// 判断溢出条件</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> x_sign = x&gt;&gt;bias;
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> judge =  result &amp; (~(mark));  <span style="color:#75715e">//溢出的判定结果 </span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> pos = (<span style="color:#ae81ff">1</span>&lt;&lt;bias) &amp; x_sign;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> neg = mark &amp; ((-<span style="color:#ae81ff">1</span>) ^ (<span style="color:#ae81ff">1</span> &lt;&lt; bias)) &amp; ~mark;
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> ans = judge + pos + neg;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> main()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> a = <span style="color:#ae81ff">0</span>, b = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	scanf(<span style="color:#e6db74">&#34;%d%d&#34;</span>, &amp;a, &amp;b);
+</span></span><span style="display:flex;"><span>	printf(<span style="color:#e6db74">&#34;%d\n&#34;</span>, saturating_add(a, b));
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/*参考答案
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">/* 饱和到TMin/TMax的加法 */</span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">int</span> saturating_add(<span style="color:#66d9ef">int</span> x, <span style="color:#66d9ef">int</span> y) {
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">int</span> sum = x + y;
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">int</span> wm1 = (<span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">int</span>)&lt;&lt;<span style="color:#ae81ff">3</span>)-<span style="color:#ae81ff">1</span>; <span style="color:#75715e">// 31</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* 如果符号位为0，则对应的掩码为全0；如果符号位为1，则对应的掩码为全1 */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> xneg_mask = (x &gt;&gt; wm1);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> yneg_mask = (y &gt;&gt; wm1);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> sneg_mask = (sum &gt;&gt; wm1);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* 正溢出的判断条件：x和y都是正数，sum为负数 */</span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">int</span> pos_over_mask =  ~xneg_mask &amp;  ~yneg_mask &amp; sneg_mask;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* 负溢出的判断条件：x和y都是负数，sum为正数 */</span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">int</span> neg_over_mask = xneg_mask &amp; yneg_mask &amp;  ~sneg_mask;
+</span></span><span style="display:flex;"><span>     
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* 有正溢出或者负溢出就判定为有溢出 */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// substitue &#39;&amp;&#39; to &#39;if&#39; in judgement oprations</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> over_mask = pos_over_mask | neg_over_mask;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* 在sum、INT_MAX和INT_MIN中选择：
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        无溢出选择sum，有正溢出选择INT_MAX，有负溢出选择INT_MIN */</span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">int</span> result = (~over_mask &amp; sum) |
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>               (pos_over_mask &amp; INT_MAX) |
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>               (neg_over_mask &amp; INT_MIN);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> result;
+</span></span><span style="display:flex;"><span> }
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">//2.77</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span>include&lt;stdio.h&gt;
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  A. K = 17   
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  B. K = -7
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  C. K = 60
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  D. K = -112 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">int</span> A(<span style="color:#66d9ef">int</span> x)
+</span></span><span style="display:flex;"><span> {
+</span></span><span style="display:flex;"><span> 	<span style="color:#66d9ef">return</span> (x&lt;&lt;<span style="color:#ae81ff">4</span>)+x;
+</span></span><span style="display:flex;"><span> }
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">int</span> B(<span style="color:#66d9ef">int</span> x)
+</span></span><span style="display:flex;"><span> {
+</span></span><span style="display:flex;"><span> 	<span style="color:#66d9ef">return</span> x-(x&lt;&lt;<span style="color:#ae81ff">3</span>);
+</span></span><span style="display:flex;"><span> }
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">int</span> C(<span style="color:#66d9ef">int</span> x)
+</span></span><span style="display:flex;"><span> {
+</span></span><span style="display:flex;"><span> 	<span style="color:#66d9ef">return</span> (x&lt;&lt;<span style="color:#ae81ff">6</span>)-(x&lt;&lt;<span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span> }
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">int</span> D(<span style="color:#66d9ef">int</span> x)
+</span></span><span style="display:flex;"><span> {
+</span></span><span style="display:flex;"><span> 	<span style="color:#66d9ef">return</span> (x&lt;&lt;<span style="color:#ae81ff">4</span>)-(x&lt;&lt;<span style="color:#ae81ff">7</span>);
+</span></span><span style="display:flex;"><span> }
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">int</span> main()
+</span></span><span style="display:flex;"><span> {
+</span></span><span style="display:flex;"><span> 	<span style="color:#66d9ef">int</span> a = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	scanf(<span style="color:#e6db74">&#34;%d&#34;</span>, &amp;a);
+</span></span><span style="display:flex;"><span> 	printf(<span style="color:#e6db74">&#34;%d\n&#34;</span>, A(a));
+</span></span><span style="display:flex;"><span> 	printf(<span style="color:#e6db74">&#34;%d\n&#34;</span>, B(a));
+</span></span><span style="display:flex;"><span> 	printf(<span style="color:#e6db74">&#34;%d\n&#34;</span>, C(a));
+</span></span><span style="display:flex;"><span> 	printf(<span style="color:#e6db74">&#34;%d\n&#34;</span>, D(a));
+</span></span><span style="display:flex;"><span> }
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">//2.83</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">A. 设 x = 0.yyyyyy......
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">      则 x = Y / (2^k -1);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">      
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    Process:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    cause x=0.yyyyyy....
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    x*2^k means shift k bytes =yyyyyy.yyyyy....=Y+x
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    that 2^k * x = Y+x
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    so x=Y / (2^k -1)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">      
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">   B.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  (a)x=5/7
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  (b)x=6/15
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  (c)x=19/63;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">//2.87</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">| Description                         | Hex  | M         | E    | V         | D        |
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">| ----------------------------------- | ---- | --------- | ---- | --------- | -------- |
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">| -0                                  | 8000 | 0         | -14  | -0        | -0.0     |
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">| Smallest value &gt;2                   | 4001 | 1025/1024 | 1    | 1025*2^-9 | 2.001953 |
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">| 512                                 | 6000 | 1         | 9    | 512       | 512.0    |
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">| Largest denormalized                | 03FF | 1023/1024 | -14  | 1023^2-24 | 0.000061 |
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">| -∞                                  | INF  | —         | —    | -∞        | -∞       |
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">| Number with hex representation 3BB0 | 3BB0 | 123/64    | -1   | 127*2^7   | 0.960938 |
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">s = 1,   k = 5,   n = 10  bias =15
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">A：非规格化
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">M=0. 阶码为00000,  bias =2^4-1 = 15.   E = 1-bias = -14
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">1 00000 0000000000   ==&gt;  1000 0000 0000 0000 = 0x8000
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">B：规格化
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">M=1+frac
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">M= 2^-10+1 =1025/1024
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">bias=15
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">E = e- bias=1    e= E+bias= M+2^4-1=16     e = 10000
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">0 10000 0000000001 ==&gt; 0x4001
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">C： E = 9  e= E+bias =24  ==&gt;11000
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">M = 1+frac= 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">0 11000 0000000000  == &gt;0x6000
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">D： 非规格化数的阶码位均为0  e=0  E=1-bias=-14
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">M=1-2^-10=1023/1024
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">0 00000 1111111111 ==&gt;0x03FF
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">E：负无穷
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">1 11111 0000000000   ==&gt;0xFC00
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">F：3BB0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">0011 1011 1011 0000 ==&gt; 0 01110 11011000
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">e=14     E =e-bias= -1     M=59/64
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">V=2^-1 * 59/64 = 59/128
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">//2.91</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> A.  0x40490FDB 展开得到  0100 0000 0100 1001 0000 1111 1101 1011
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">   转换成小数位模式：0 10000000 10010010000111111011011
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    S = 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    E = e-Bias = 2^7-(2^7-1)=1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    M = 1+ frac = 1.10010010000111111011011
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    所以该数为 V = 2^E *M =2M  即M &lt;&lt; 1即可
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    得到：11.0010010000111111011011
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">B.    0b11.(001)n
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//表示3又1/7。  1/7的二进制字符串表示是 0.yyyyy, y= 001.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">C. 11.00100100011111011101
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">   11.001001001....
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">   可以看到，相对于小数点，从第9位开始不同
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span></code></pre></div>
+
+  
+
+  
+  <hr>
+  <footer>
+
+  
+    <section>
+    <h4>Share</h4>
+    <nav class="nav sharing-icons">
+      <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fSkylanding.github.io%2f2022%2f10%2fcsapp%25E7%25AC%25AC%25E4%25BA%258C%25E7%25AB%25A0%25E7%25AC%2594%25E8%25AE%25B0%2f" title="Share on Facebook"><span class="fab fa-facebook-f fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fSkylanding.github.io%2f2022%2f10%2fcsapp%25E7%25AC%25AC%25E4%25BA%258C%25E7%25AB%25A0%25E7%25AC%2594%25E8%25AE%25B0%2f" title="Share on LinkedIn"><span class="fab fa-linkedin-in fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fSkylanding.github.io%2f2022%2f10%2fcsapp%25E7%25AC%25AC%25E4%25BA%258C%25E7%25AB%25A0%25E7%25AC%2594%25E8%25AE%25B0%2f&amp;text=CSAPP%e7%ac%ac%e4%ba%8c%e7%ab%a0%e7%ac%94%e8%ae%b0" title="Tweet this"><span class="fab fa-twitter fa-2x"></span></a>
+    </nav>
+  </section>
+
+  
+
+  
+  </footer>
+  
+
+</article> 
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>About</h4>
+    <p dir="auto">I&rsquo;m Liyu from WHU, willing to share and exchange experiences especially in machine learning.</p>
+  </section>
+  
+
+  
+        <section class="sidebar-module">
+    <h4>Recent Posts</h4>
+    <ol class="list-unstyled">
+
+
+<li><a href="/2022/10/csapp%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%AC%94%E8%AE%B0/">CSAPP第二章笔记</a></li>
+
+<li><a href="/2022/10/%E6%88%91%E5%9C%A8%E6%83%B3%E4%BB%80%E4%B9%88%E5%91%A2/">我在想什么呢？</a></li>
+
+<li><a href="/2022/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a></li>
+
+    </ol>
+  </section>
+
+  
+
+  
+  <section class="sidebar-module">
+    <h4>Links</h4>
+    <ol class="list-unstyled">
+      
+      <li><a href="https://example.org">About me</a></li>
+      
+      <li><a href="https://example.com">个人日志</a></li>
+      
+      <li><a href="https://example.com">学习经验</a></li>
+      
+    </ol>
+  </section>
+  
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+    
+
+    
+    <footer class="blog-footer">
+      <p dir="auto">
+      
+      Blog template created by <a href="https://twitter.com/mdo">@mdo</a>, ported to Hugo by <a href='https://twitter.com/mralanorth'>@mralanorth</a>.
+      
+      </p>
+      <p>
+      <a href="#">Back to top</a>
+      </p>
+    </footer>
+    
+
+  </body>
+
+</html>

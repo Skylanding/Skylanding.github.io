@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CSAPP on Liyu&#39;s Page</title>
+    <link>https://Skylanding.github.io/tags/csapp/</link>
+    <description>Recent content in CSAPP on Liyu&#39;s Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://Skylanding.github.io/tags/csapp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSAPP第二章笔记</title>
+      <link>https://Skylanding.github.io/2022/10/csapp%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 30 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://Skylanding.github.io/2022/10/csapp%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>//2.61 /* A. !~x B. !x C. ! ~(x |0xFF) 0xFF -&amp;gt; 00 00 00 FF 0xFF because unsure about the bits of x D. int shift_amount = (sizeof(int)-1)&amp;lt;&amp;lt;3; //to get the number of bits from the highest to the lowest displacement of the int type data int xright = x&amp;gt;&amp;gt;shift_amount; int xmask = xright&amp;amp;0xff; //All bits are 0 if they comply with the request return !</description>
+    </item>
+    
+  </channel>
+</rss>
