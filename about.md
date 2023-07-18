@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-My name is Li Yu, and I am currently a student from the ECE department. I am enrolled in the Honors College of Wuhan University. I am researching the application of AI in biomedical field and have expertise in deep learning on platforms such as PyTorch and TensorFlow. I have a great passion for scientific research!
+My name is Yu Li, and I am currently a student from the Honors College of Wuhan University, majoring in ECE. I am researching the application of AI in biomedical field and have expertise in deep learning on platforms such as PyTorch and TensorFlow. I have a great passion for scientific research!
 
 ### More Information
 
