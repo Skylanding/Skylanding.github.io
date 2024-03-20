@@ -40,6 +40,14 @@
     <content type="html"><![CDATA[<h2 id="EE140-240A-Linear-Analog-Integrated-Circuits"><a href="#EE140-240A-Linear-Analog-Integrated-Circuits" class="headerlink" title="EE140&#x2F;240A: Linear&#x2F;Analog Integrated Circuits"></a><strong>EE140&#x2F;240A: Linear&#x2F;Analog Integrated Circuits</strong></h2><p><strong>Description:</strong> Single and multiple stage transistor amplifiers. Operational amplifiers. Feedback amplifiers, 2-port formulation, source, load, and feedback network loading. Frequency response of cascaded amplifiers, gain-bandwidth exchange, compensation, dominant pole techniques, root locus. Supply and temperature independent biasing and references. Selected applications of analog circuits such as analog-to-digital converters, switched capacitor filters, and comparators. Hardware laboratory and design project.</p><hr><p>This lab contains 3 stage and followed by a project:<br>EE140&#x2F;240A is all about Amplifier Design </p><p>● Lab 1: Introduction to Cadence.</p><p>● Lab 2: Designing Amplifiers via Hand Calculations.</p><p>● Lab 3: Designing Amplifiers via Python&#x2F;Matlab Scripts.</p><p>● Project: Amplifier Design for an Application.</p><p><code>Believe me, this project is very challenging and much more complicated than labs</code>.🤔 </p><p>I will cover lab2 ~ project contents by updating my work and hopefully finished in 2024 summer.✊</p><hr><p>03&#x2F;19&#x2F;2024:</p><h3 id="Lab2-Long-Channel-Amplifier-Design"><a href="#Lab2-Long-Channel-Amplifier-Design" class="headerlink" title="Lab2: Long Channel Amplifier Design"></a>Lab2: Long Channel Amplifier Design</h3><h4 id="Part-A-Analysis-and-Simulation"><a href="#Part-A-Analysis-and-Simulation" class="headerlink" title="Part A: Analysis and Simulation"></a>Part A: Analysis and Simulation</h4><p>In this first part, you will analyze and simulate a saturated NMOS load degenerated-source amplifier, shown below. </p><figure>    <img src="1.png" width="500">    <figcaption>PartA</figcaption></figure><p>Scenario 1.</p><p>Assume that VB1 &#x3D; 1.1 V , Rd &#x3D; 0 (i.e. no degeneration), (W&#x2F;L)1 &#x3D; (50&#x2F;5) µm&#x2F;µm, and (W&#x2F;L)2 &#x3D; (10&#x2F;90) µm&#x2F;µm. VDD &#x3D; 5 V , Rs &#x3D; 5 kΩ and CL &#x3D; 2.5 pF. </p><p>Scenario 2. </p><p>Assume that VB1 &#x3D; 1.2 V , Rd &#x3D; 2.5 kΩ, (W&#x2F;L)1 &#x3D; (50&#x2F;5) µm&#x2F;µm, and (W&#x2F;L)2 &#x3D; (10&#x2F;90) µm&#x2F;µm. VDD &#x3D; 5 V , Rs &#x3D; 5 kΩ and CL &#x3D; 2.5 pF. </p><p>For each scenario, answer the following: </p><p>• Determine the small-signal gain vout&#x2F;vs using both hand calculation and simulation. You should plot the magnitude of the gain (in dB) vs. log-scale frequency for this amplifier. You may make any reasonable approximations in your hand calculations, but be sure to write them down. Use the GmRout method for your hand-calculations (see Ed Discussion for the method). </p><p>• Determine the cutoff frequency (3 dB bandwidth) using both hand calculations and simulation. You may make any reasonable approximations in your hand calculations, but be sure to write them down.</p><p>• Determine the maximum output voltage swing that this amplifier can deliver. You do not have to calculate output swing, only the simulated value and plot needs to be reported.</p>]]></content>
     
     
+    <categories>
+      
+      <category>Project</category>
+      
+      <category>Technology</category>
+      
+    </categories>
+    
     
     <tags>
       
@@ -62,6 +70,14 @@
     
     <content type="html"><![CDATA[<h2 id="EECS-151"><a href="#EECS-151" class="headerlink" title="EECS 151"></a>EECS 151</h2><h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>Hey! In 2024 spring, I am taking <strong>EECS 151&#x2F;251A: Introduction to Digital Design and Integrated Circuits</strong> and the ASIC lab of this course. You can get more info of labs from <a href="https://github.com/EECS150/asic-labs-sp24">here</a>. And click <a href="https://github.com/EECS150/asic-project-sp24">here</a> to get project details.</p><img src="/2024/03/18/EECS151-Project-check1/1.png" class="" title="151LA: ASIC"><p>This lab is very challenging if you are not Berkeley undergrad (or even their  own undergrads would feel troublesome because the heavy workload…). The lab stage includes FIFO design based on skywater130, parallel optimization by adding arbiter, and SRAM design and layout optimization. After labs, the project is to tackle with the 3-stages RISC-V CPU design,  which requires a lot of effort and a lot of time, especially if you are unfamiliar with the RISC-V instructions and Verilog codes.👊</p><p><strong>Things to note:</strong> 👂</p><p>It is illegal to copy or download configuration files from Berkeley server, so I think self-study is almost impossible without test permissions on the Berkeley server as well as Skywater130 configuration.</p><p>And all relevant codes will be updated to my <a href="https://github.com/Skylanding">Github account</a> <strong>after</strong> my project finished, due to academic integrity. ❗❗</p><hr><p>(Last edited on 03&#x2F;19&#x2F;2024)</p><p>I will continue to update the relevant content of the EECS151 project until the end of the project. If you have any questions or suggestions, you can contact me via email or comments~</p><h3 id="Stage1-Pipeline-diagram-and-ALU-design"><a href="#Stage1-Pipeline-diagram-and-ALU-design" class="headerlink" title="Stage1: Pipeline diagram and ALU design"></a>Stage1: Pipeline diagram and ALU design</h3><h5 id="Pipeline-diagram"><a href="#Pipeline-diagram" class="headerlink" title="Pipeline diagram:"></a>Pipeline diagram:</h5><p>About pipeline diagram, we need to achieve a 3-stage RISCV, but typically 5- stage is common. It’s easy to think when you have <code>IF</code>, <code>ID</code>, <code>EX</code>, <code>MEM</code>, <code>WB</code> parallel in one cycle, just like this diagram shown:</p><figure>    <img src="pipeline1.png" width="500">    <figcaption>5-stage pipeline</figcaption></figure><figure>    <img src="pipeline2.png" width="500">    <figcaption>pipeline analysis</figcaption></figure><p>From diagram you can observe, for example, it’s easy to obtain one cycle when you just take one opeation in one period.(Maybe not easy XD.. I mean it’s easy to understand but hard to design or draw without reference)</p><p>But for mutli-stage pipeline, when you need to take 3~5 operations in one period, essentially we set <code>control</code> unit to assign instructions for each period. </p><figure>    <img src="pipeline3.png" width="500">    <figcaption>pipeline</figcaption></figure><p>It’s really important to focus on signal path and data path, as well as the clock for each stage. Considering period, it’s necessary to set <code>mux</code> in this problem to set critical path&#x2F;minimum frequency. Sometimes we will ignore <code>mux</code> in that typically we design 5-stage pipeline,  in that case, we can just give <code>mux</code> between each stage. <strong>However</strong>, for this project, if you want to design 3-stage, which means only 2 <code>mux</code> can be added, it is necessary to merge some stages. </p><p>For me and my partner Timmy(senior, Chinese American from taiwan), :our idea is just as follows. First we find a 5-stage reference, and consider which stage can be eliminated or merged. For <code>mux</code>, in this project checkoff you need to point out FFs and Regs specifically, really a heavy workload, right? In other cases I think simple mux should be fine. 🙂</p><figure>    <img src="diagram.png" width="600">    <figcaption>pipeline diagram</figcaption></figure><hr><h5 id="ALU-Section"><a href="#ALU-Section" class="headerlink" title="ALU Section:"></a>ALU Section:</h5><p><em>TO DO:</em><br>In this section, you will be designing and testing an ALU for later use in the semester. A header file containing define statements for operations (<code>ALUop.vh</code>) is provided inside the <em>src</em> directory of this lab. This file has already been included in an ALU template given to you in the same folder (<code>ALU.v</code>), but you may need to modify the include statement to match the correct path of the header file. Compare <code>ALUop</code> input of your ALU to the define statements inside the header file to select the function ALU is currently running. For <code>ADD</code> and <code>SUB</code>, treat the operands as unsigned integers and ignore overflow in the result. Definition of the functions is given below:</p><table><thead><tr><th>Op Code</th><th>Definition</th></tr></thead><tbody><tr><td>ADD</td><td>Add A and B</td></tr><tr><td>SUB</td><td>Subtract B from A</td></tr><tr><td>AND</td><td>Bitwise <code>and</code> A and B</td></tr><tr><td>OR</td><td>Bitwise <code>or</code> A and B</td></tr><tr><td>XOR</td><td>Bitwise <code>xor</code> A and B</td></tr><tr><td>SLT</td><td>Perform a signed comparison, Out&#x3D;1 if A &lt; B</td></tr><tr><td>SLTU</td><td>Perform an unsigned comparison, Out &#x3D; 1 if A &lt; B</td></tr><tr><td>SLL</td><td>Logical shift left A by an amount indicated by B[4:0]</td></tr><tr><td>SRA</td><td>Arithmetic shift right A by an amount indicated by B[4:0]</td></tr><tr><td>SRL</td><td>Logical shift right A by an amount indicated by B[4:0]</td></tr><tr><td>COPY_B</td><td>Output is equal to B</td></tr><tr><td>XXX</td><td>Output is 0</td></tr></tbody></table><p>Given these definitions, complete <code>ALU.v</code> and write a testbench tb <code>ALU.v</code> that checks all these operations with random inputs at least a 100 times per operation and outputs a PASS&#x2F;FAIL indicator. </p><figure>    <img src="RV32I_Base_Instruction_Set.png" width="500">    <figcaption>RV32I Instructions</figcaption></figure>]]></content>
     
+    
+    <categories>
+      
+      <category>Project</category>
+      
+      <category>Technology</category>
+      
+    </categories>
     
     
     <tags>
@@ -86,6 +102,12 @@
     <content type="html"><![CDATA[<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs scss">近期心理状态：<br>&lt;<span class="hljs-number">24</span> Spring List&gt;😄😄😄😄<br><span class="hljs-number">140</span>Mid1（🤡）<br><span class="hljs-number">151</span>Mid（🤡）<br><span class="hljs-number">140</span>Mid2（😭 coming）<br><span class="hljs-number">140</span>lab (😭 doing)<br><span class="hljs-number">151</span>project (😭 doing)<br><span class="hljs-number">243</span>Final <span class="hljs-built_in">Pre</span>(😭 doing)<br>UC Davis <span class="hljs-built_in">Remote</span>(Professor：🤬🤯， me:🤫)<br>UC Berkeley <span class="hljs-built_in">Anwar</span>(Professor:🤗🤔， me:😭)<br>MedIA <span class="hljs-built_in">paper</span>(doing 🤡😭)<br>Depth Estimation <span class="hljs-built_in">paper</span>(doing 🤡😭)<br></code></pre></td></tr></table></figure><div align="center">    <img src="march2.png" width="400"></div><p>今天遇到了典中典龟速校园网，做一半直接给我服务器卡掉线了……勉强写完了151project的checkoff1,有点无语的是，周四第一次 git project发现TA服务器里装的是lab的仓库……昨天做着做着发现TA给的testbench不太对……后来发现是我原本的ALU就没写对，原来这里的<code>Branch</code>只是用来测试语句，并不是真正的判断跳转，也就是说testbench里给的居然是<code>ADD</code>…..</p><div align="center">    <img src="march1.png" width="300"></div><p>最近忙的时候在循环听AI孙燕姿。<code>很好音乐🎵，使我精力充沛😄👍</code>。我强烈推荐这一首，调音非常好。</p><div align="center">    <img src="march3.png" width="500"></div><p>但是事情也是真多啊….. 春假打算好好补补所有的进度⚡⚡。Good luck!</p>]]></content>
     
     
+    <categories>
+      
+      <category>Chat</category>
+      
+    </categories>
+    
     
     <tags>
       
@@ -106,6 +128,12 @@
     
     <content type="html"><![CDATA[<p>In the summer of 2023 when I was a sophomore, I participated in the summer intern at UC Davis through the <a href="https://great.ucdavis.edu/">GREAT program</a>, and the research group was the <a href="https://www.ece.ucdavis.edu/~wejyang/home.html">Yang Group</a> of the ECE Department. This is also the first year that Wuhan University has participated in the GREAT project. In 2023, from Wuhan University only Jiawei and I were admitted. ✊</p><p>I mainly collaborate with is Shing-Jiuan (fourth-year PhD candidate), and our PI and mentor is Professor Yang. We mainly focus on SpO2 measurement under Monte Carlo simulation, starting from building a model, gradually improving the process from single target to dual target, and finally using simulated data to fit real data. This project has complete formula derivation and corresponding simulation code. Details can be viewed in my <a href="https://github.com/Skylanding/oximetrey-model">repository</a>. </p><p>We will maintain remote contact until September 2024. I am very grateful to Professor Yang and Shing-Jiuan for their guidance and help. ❤</p><hr><h3 id="SpO2-Model-🐏"><a href="#SpO2-Model-🐏" class="headerlink" title="SpO2 Model 🐏"></a>SpO2 Model 🐏</h3><h4 id="One-subject-model-Maternal-layer"><a href="#One-subject-model-Maternal-layer" class="headerlink" title="One- subject model: Maternal layer"></a>One- subject model: Maternal layer</h4><h5 id="Formula-deduction"><a href="#Formula-deduction" class="headerlink" title="Formula deduction"></a>Formula deduction</h5><h5 id="Model-construction"><a href="#Model-construction" class="headerlink" title="Model construction"></a>Model construction</h5><h5 id="Analysis-code"><a href="#Analysis-code" class="headerlink" title="Analysis code"></a>Analysis code</h5><h4 id="Two-subjects-model-Mixed-signal-of-maternal-and-fetal-signal"><a href="#Two-subjects-model-Mixed-signal-of-maternal-and-fetal-signal" class="headerlink" title="Two-subjects model: Mixed signal of maternal and fetal signal"></a>Two-subjects model: Mixed signal of maternal and fetal signal</h4>]]></content>
     
+    
+    <categories>
+      
+      <category>Project</category>
+      
+    </categories>
     
     
     <tags>
@@ -128,6 +156,12 @@
     <content type="html"><![CDATA[<p>I finally got straight A+ in 23 fall…. ;) It was not easy for me, I am not a great test taker… My favorite course, CS:APP, I was just A-.</p><p>I had arrived at Berkeley and was busy with course selection and various other matters. In addition, I was also looking for research. I was very, very busy. I took EECS151, EECS151LA, EE140 and MSE243. These are very challenging and I hope to have a good result.</p><p>顺带一提，数据结构，CSAPP，计组和EDA的资料整理又得延后了，或许会在这学期结束后和UCB的EECS151&amp;EE140一起整理发布出来。</p><p>Good luck!</p><hr><p><del>不是，我为什么要来这边上数集模集啊，HY往培养计划里塞这么多必修的是不是有那个大病啊？沟槽的151workload，沟槽的140hw，沟槽的培养方案😭😭😭</del></p>]]></content>
     
     
+    <categories>
+      
+      <category>Chat</category>
+      
+    </categories>
+    
     
     <tags>
       
@@ -149,6 +183,12 @@
     <content type="html"><![CDATA[<p>You are welcome to cite my ECG conference articles. Articles from IEEE Sensors Journal have also been accepted and are waiting for publication.</p><p>I have been very busy recently looking for Berkeley research groups and final review &amp; papers. I will publish another MIA in the near future(Lei’s group), about feature extract processing of large models in medical image processing. I will go to UCB for a semester as an visiting student after January 16th. I hope everything goes well.</p><p>最近忙于寻求Berkeley的课题组和期末复习＆论文，非常忙，近期我正在努力向MIA靠拢，关于医学图像处理方面，大模型的feature extract处理。1月16日后我会前往UCB交换一学期，希望一切顺利。</p>]]></content>
     
     
+    <categories>
+      
+      <category>Chat</category>
+      
+    </categories>
+    
     
     <tags>
       
@@ -167,6 +207,12 @@
     
     <content type="html"><![CDATA[<hr><p>Two months flies, it is difficult to make a summary of the summer of 2023. When I pulled a suitcase to sit alone on the plane on the other side of the ocean, I never thought that the life of UC Davis was like this. From surprise to dull, from tension to soothing, not only research, but also life.</p><p>The whole project is mainly cooperating with Shing-Jiuan. She also takes care of my research very much. We often have a discussion of one or two hours. Sometimes she can’t figure out the problems and grabbed her hair, it really looked like my sister. Then I met Zixiao and Yifei in the gym, and was astonished by Yifei’s badminton. Before leaving, I was familiar with Kangning who was very good. He treated me at Black Bear and took me home after my bicycle was broken. He discussed some future direction issues with me in his spare time. I was surprised that he was a senior doctor who had undergone lots scientific researchs, and he had to bring his little daughter under the pressure of study and work. I sincerely wish him good. Regarding professor, if let me describe Professor Yang, I prefer to use the word ‘Strict’. His strictness is not a kind of attitude towards research. At the graduation dinner of Junjie, the professor asked me what the biggest feeling was. I said there are few professors who will meet with you for two hours in private. They are very busy. Professor Yang said “It depends”.</p><p>Luck is not very good. I encountered a lot of trouble when I went abroad for the first time, and it was just the beginning. Luck is very good. The people they meet are very nice. The roommates are people who get along well. Labmates are good researchers.</p><p>It is difficult to give the next perfect definition to the two -month journey. What I think of it may be growth. </p><p>I will always miss this summer.</p><p>2023夏的戴维斯，安静平和的小镇。</p><hr><img src="/2023/08/29/davis3/davis1.jpg" class="" title="Junjie Graduation Defense"><img src="/2023/08/29/davis3/davis2.jpg" class="" title="GREAT Program Ending"><img src="/2023/08/29/davis3/davis3.jpg" class="" title="At Kemper Hall">]]></content>
     
+    
+    <categories>
+      
+      <category>Chat</category>
+      
+    </categories>
     
     
     <tags>
@@ -187,6 +233,12 @@
     <content type="html"><![CDATA[<p>What makes me strange is that people here seem to use matlab, don’t know much about python format, and even jupyter code is not familiar… This forces me to go back to learn matlab syntax, but I also think this is really useful of.</p><p>慢慢地跑一些Monte Carlo模拟，这里的空调真舒服~</p><img src="/2023/08/07/davis2/davis2.png" class="" title="Monte Carlo">]]></content>
     
     
+    <categories>
+      
+      <category>Chat</category>
+      
+    </categories>
+    
     
     <tags>
       
@@ -205,6 +257,12 @@
     
     <content type="html"><![CDATA[<p>It is very common that I rush to make PPT before the group meeting… To be honest, I still like the life here in Davis, it is very peaceful and beautiful, and people are very friendly. But because of my personality, I always like to plan and think about many things, which doesn’t seem to fit well with the quiet pastoral life… If possible, I still hope to live here forever.</p><p>And one more thing is, MY SPEAKING IS SO BAD…XD</p><p>如果能重来，我要好好学口语~</p>]]></content>
     
+    
+    <categories>
+      
+      <category>Chat</category>
+      
+    </categories>
     
     
     <tags>
@@ -225,6 +283,12 @@
     <content type="html"><![CDATA[<p>My computer mainboard burnt out, and there was no place for repairs in Davis. I had no choice but to buy another laptop here. Most of my files can be recovered, but I lost my previous blog files, and the backup was on my lab computer. I won’t be able to go back for two months, so I plan to rebuild my blog.😔</p><p>Next, I will continue to update this blog, including the notes on CSAPP and Data structures that I have been wanting to update since last year, as well as the notes on Computer Organization and Design for this semester. Afterward, I will focus on research and applying for a Ph.D. program in ECE in the United States.</p>]]></content>
     
     
+    <categories>
+      
+      <category>Chat</category>
+      
+    </categories>
+    
     
     <tags>
       
@@ -243,6 +307,12 @@
     
     <content type="html"><![CDATA[<p>Hello! This is Yu Li, a student from WHU and attempting to explore more!</p><img src="/2023/07/17/world/230717.jpg" class="" title="UC Davis sunset">]]></content>
     
+    
+    <categories>
+      
+      <category>Chat</category>
+      
+    </categories>
     
     
     <tags>
