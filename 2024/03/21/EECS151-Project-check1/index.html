@@ -30,7 +30,7 @@
 <meta property="og:image" content="http://example.com/2024/03/21/EECS151-Project-check1/diagram.png">
 <meta property="og:image" content="http://example.com/2024/03/21/EECS151-Project-check1/RV32I_Base_Instruction_Set.png">
 <meta property="article:published_time" content="2024-03-21T23:28:38.000Z">
-<meta property="article:modified_time" content="2024-03-22T05:41:04.600Z">
+<meta property="article:modified_time" content="2024-03-22T05:46:22.135Z">
 <meta property="article:author" content="Yu Li">
 <meta property="article:tag" content="2024berkeley">
 <meta property="article:tag" content="EECS151">
@@ -259,7 +259,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          1.4k 字
         
       </span>
     
@@ -270,7 +270,7 @@
         
         
         
-          17 分钟
+          16 分钟
         
       </span>
     
@@ -361,7 +361,6 @@
 <p>You will also have to generate the test vectors used in your testbench. A test vector can either be specified in Verilog, or generated using a higher-level language like Python.</p>
 <p>Test vectors are of the format specified above, with the 7 opcode bits occupying the left-most bits. We’ve also provided a test vector generator written in Python. However, the only R-type instruction it tests is add. Update <code>tests/ALUTestGen.py</code> to generate test vectors for all R-type instructions. You may find the <code>comp</code> function useful for performing signed comparisons.</p>
 <hr>
-<h3 id="Making-a-pipeline-diagram"><a href="#Making-a-pipeline-diagram" class="headerlink" title="Making a pipeline diagram"></a>Making a pipeline diagram</h3><p>The first step in this project is to make a pipeline diagram of your processor, as described in lecture. You only need to make a diagram of the datapath (not the control). Each stage should be clearly separated with a vertical line, and flip-flops will form the boundary between stages. It is a good idea to name signals depending on what stage they are in (eg. <code>s1_killf</code>, <code>s2_rd0</code>). Also, it is a good idea to separately name the input&#x2F;output (D&#x2F;Q) of a flip flop (eg. <code>s0_next_pc</code>, <code>s1_pc</code>). Draw your diagram in a drawing program (Inkscape, Google Drawings, draw.io or any program you want), because you will need to keep it up-to-date as you build your processor. As such, we recommend you leave plenty of space between diagram elements to make it easier to insert changes as your project evolves. It helps to print out scratch copies while you are debugging your processor and to keep your drawings revision-controlled with git. Once you have finished your initial datapath design, you will implement the main building block in the datapath—the ALU.</p>
 <h3 id="Pipeline-diagram"><a href="#Pipeline-diagram" class="headerlink" title="Pipeline diagram"></a>Pipeline diagram</h3><p>About pipeline diagram, we need to achieve a 3-stage RISCV, but typically 5- stage is common. It’s easy to think when you have <code>IF</code>, <code>ID</code>, <code>EX</code>, <code>MEM</code>, <code>WB</code> parallel in one cycle, just like this diagram shown:</p>
 <figure>
     <img src="pipeline1.png" srcset="/img/loading.gif" lazyload width="500">
@@ -589,12 +588,6 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
-                    
-                      <a href="/2024/03/21/2024-March2/" title="2024_March2">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">2024_March2</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
                     
                   </article>
                   <article class="post-next col-6">
