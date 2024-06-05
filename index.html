@@ -85,7 +85,7 @@
 
           <tr>
             <td class="tdimg" style="padding: 20px; width: 35%; vertical-align: center">
-              <img src="images/UCI_fusion.png" width="230"/>
+              <img src="images/UCI_fusion.png" width="215"/>
             </td>
             <td class="tdcontent" style="padding: 20px; width: 65%; vertical-align: center">
               <p>
@@ -105,11 +105,10 @@
               <span class="category_2">Multimodal LLM</span>
               <p></p>
               <p>
-                The main focus is on using large visual models to detect anomalies in autonomous driving mode and improve mode adjustments based on weather conditions.
+                Our main work is how to use multi-modal large models to improve the algorithm fusion 
+                of weather anomalies in autonomous driving mode.
               </p>
             </td>
-
-        
 
           <tr>
             <td class="tdimg" style="padding: 20px; width: 35%; vertical-align: center">
@@ -127,14 +126,17 @@
                 <br />
               </p>
               <div class="paper" id="xu2020batchnorm">
-                <a href="https://arxiv.org/abs/2404.12734">paper</a>
-                &nbsp/&nbsp
-                <a href="https://github.com/VceChang/DLoRA-TrOCR">code</a>
+                <a href="https://arxiv.org/abs/2404.12734">Paper</a>/<a href="https://github.com/VceChang/DLoRA-TrOCR">Code</a>
               </div>
               <br>
               <br>
-              <span class="category_3">Interpretability</span>
+              <span class="category_2">Multimodal LLM</span>
               <p></p>
+              <p>
+                We explored the optimization of various full-parameter fine-tuning methods such as LoRA in LLM. 
+                For OCR, a hybrid visual-text model, corresponding to the Transformer architecture, 
+                DoRA and LoRA have good improvement effects on the visual encoder and text decoder respectively.
+              </p>
             </td>
           </tr>
 
@@ -155,15 +157,24 @@
                 <br />
               </p>
               <div class="paper" id="xu2020batchnorm">
-                <a href="https://github.com/Skylanding/DSATNet">code</a>
+                <a href="https://github.com/Skylanding/DSATNet">Code</a>
               </div>
+              <br>
+              <br>
+              <span class="category_3">Medical Image</span>
+              <span class="category_2">Multimodal LLM</span>
+              <p></p>
+              <p>
+                We leveraged the rich semantic segmentation information of SAM and 
+                applied its fine-grained attention capability to the feature extraction module of Transformer, 
+                achieving SOTA IoU scores in ultrasound image segmentation.
+              </p>
             </td>
-            <br>
           </tr>
 
           <tr>
             <td class="tdimg" style="padding: 20px; width: 35%; vertical-align: center">
-              <img src="images/Monte.png" width="250"/>
+              <img src="images/Monte.png" width="225"/>
             </td>
             <td class="tdcontent" style="padding: 20px; width: 65%; vertical-align: center">
               <p>
@@ -172,19 +183,26 @@
                     SpO2 measurement model based on Monte Carlo simulation</papertitle>
                 <!-- </a> -->
                 <br />
-                <strong>Yu Li</strong>. Mentor:Shing-jiuan Liu, Prof.Weijian Yang
+                <strong>Yu Li</strong>,Shing-jiuan Liu, Prof.Weijian Yang
                 <br />
                 <em>In progress</em>, 2023-2024.
                 <br />
               </p>
               <!-- <div class="paper" id="xu2020batchnorm">
-                <a href="https://arxiv.org/pdf/2301.10766">paper</a>
-                &nbsp/&nbsp
-                <a href="https://github.com/Daniel-xsy/BEV-Attack">code</a>
+                <a href="https://github.com/Skylanding/DSATNet">code</a>
               </div> -->
+              <br>
+              <br>
+              <span class="category_4">Algorithmic design</span>
+              <p></p>
+              <p>
+                Monte Carlo simulation data is used to improve the model and design the algorithm for the SpO2 measurement process, 
+                and finally the reverse judgment process of physiological parameters is realized.
+              </p>
             </td>
-            <br>
           </tr>
+
+             
 
         </tbody></table>
 
@@ -213,22 +231,28 @@
               <br />
               <strong>Yu Li</strong>, Timonty Chu.
               <br />
-              <em>In the first phase (front-end), I design and implement a 3-stage RISC-V processor in Verilog, and run simulations to test for functionality. Then in the second phase (back-end), I implement front-end design in the SKY130 PDK using the VLSI tools</em>, 2024.2-2024.4
+              2024.2-2024.4
               <br />
             </p>
 
             <div class="paper" id="xu2020batchnorm">
-              <a href="https://github.com/EECS150/asic-project-sp24">link</a>
-              &nbsp/&nbsp
-              <a href="data/pdf/riscv-spec-20191213.pdf">manual</a>
-              &nbsp/&nbsp
-              <a href="https://github.com/Skylanding/EECS151-Project">project</a>
+              <a href="https://github.com/EECS150/asic-project-sp24">Asic Lab</a>
+              /<a href="data/pdf/riscv-spec-20191213.pdf">Manual</a>
+              /<a href="https://github.com/Skylanding/EECS151-Project">Project</a>
             </div>
-          </td>
-          <br>
-        </tr>
-        </tbody></table>
+            <br>
+            <br>
+            <span class="category_5">CPU Desgin</span>
+            <p></p>
+            <p>
+              In the first phase (front-end), I design and implement a 3-stage RISC-V processor in Verilog, 
+              and run simulations to test for functionality.
+              Then in the second phase (back-end), I implement front-end design in the SKY130 PDK using the VLSI tools.
+            </p>
+            </td>
+          </tr>
 
+        
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
             <td class="tdimg" style="padding: 20px; width: 35%; vertical-align: center">
@@ -243,19 +267,24 @@
                 <br />
                 <strong>Yu Li</strong>.
                 <br />
-                <em>To use a series resistance of 400 Ohms and a capacitance of 60 pF to design the amplifier to the specifications</em>, 2024.2-2024.4
+                2024.2-2024.4
                 <br />
               </p>
-  
+
               <div class="paper" id="xu2020batchnorm">
-              <a href="https://github.com/Skylanding/24-spring-ee140/blob/main/lab/project/LCD%20Driver%20Project.pdf">project</a>
-              &nbsp/&nbsp
-              <a href="data/pdf/EE140_project.pdf">report</a>
+              <a href="https://github.com/Skylanding/24-spring-ee140/blob/main/lab/project/LCD%20Driver%20Project.pdf">Project</a>
+              /<a href="data/pdf/EE140_project.pdf">Report</a>
               </div>
-            </td>
-            <br>
-          </tr>
-          </tbody></table>
+              <br>
+              <br>
+              <span class="category_5">Circuit Design</span>
+              <p></p>
+              <p>
+                To use a series resistance of 400 Ohms and a capacitance of 60 pF to design the amplifier to the specifications.
+              </p>
+              </td>
+            </tr>
+  
           
         
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -272,18 +301,25 @@
                   <br />
                   <strong>Yu Li</strong>.
                   <br />
-                  <em>A multi-channel video acquisition and acceleration system was implemented through Unisoc FPGA. It includes video input collection of two different transmission methods, HDMI/PCIE, onboard DDR video frame buffer, video output of HDMI/PCIE two methods, video splicing, scaling and other functions.</em>, 2023.3-2023.6
+                  <em></em>, 2023.3-2023.6
                   <br />
                 </p>
     
                 <div class="paper" id="xu2020batchnorm">
-                <a href="http://univ.ciciec.com/nd.jsp?id=556">competition link</a>
-                <!-- <a href="http://univ.ciciec.com/nd.jsp?id=556">competition link</a> -->
+                <a href="http://univ.ciciec.com/nd.jsp?id=556">Competition Link</a>
                 </div>
-              </td>
-              <br>
-            </tr>
-            </tbody></table>
+                <br>
+                <br>
+                <span class="category_1">Computer Vision</span>
+                <span class="category_5">FPGA</span>
+                <p></p>
+                <p>
+                  A multi-channel video acquisition and acceleration system was implemented through Unisoc FPGA. 
+                  It includes video input collection of two different transmission methods, HDMI/PCIE, onboard DDR video frame buffer, 
+                  video output of HDMI/PCIE two methods, video splicing, scaling and other functions.
+                </p>
+                </td>
+              </tr>
 
             <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
@@ -299,19 +335,25 @@
                     <br />
                     <strong>Yu Li</strong>.
                     <br />
-                    <em>For the attempt of deep learning method for ECG classification, the construction of multi-layer neural network and the parameter grid search of effective tool XGBoost.</em>, 2022.10-2023.3
+                    2022.10-2023.3
                     <br />
                   </p>
       
-                  <div class="paper" id="xu2020batchnorm">
-                  <a href="https://ieeexplore.ieee.org/abstract/document/10335476?casa_token=W35SppfudKkAAAAA:7FrTtfe0OgPMGoRX79ruUt9Ryqpa2Bqnpm2rnvq5MJzDpCw7z8bd9Gfww7SCVQBLez37qyKiYDY">paper</a>
-                  &nbsp/&nbsp
-                  <a href="https://github.com/Skylanding/ECG-Classification">code</a>
-                  </div>
-                </td>
+                <div class="paper" id="xu2020batchnorm">
+                <a href="https://ieeexplore.ieee.org/abstract/document/10335476?casa_token=W35SppfudKkAAAAA:7FrTtfe0OgPMGoRX79ruUt9Ryqpa2Bqnpm2rnvq5MJzDpCw7z8bd9Gfww7SCVQBLez37qyKiYDY">Paper</a>
+                /<a href="https://github.com/Skylanding/ECG-Classification">Code</a>
+                </div>
                 <br>
+                <br>
+                <span class="category_3">Deep Leanring</span>
+                <p></p>
+                <p>
+                  For the attempt of deep learning method for ECG classification, 
+                  the construction of multi-layer neural network and the parameter grid search of effective tool XGBoost.
+                </p>
+                </td>
               </tr>
-              </tbody></table>
+
 
 
         <hr>
