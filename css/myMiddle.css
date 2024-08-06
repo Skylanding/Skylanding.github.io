@@ -74,43 +74,9 @@ table#noborder-mid {
 
 
 
-
-.category_1 {
-  font-weight: bold;
-  color: #000000;
-  background-color: #7ac7e2;
-  padding: 4px;
-  border-radius: 4px;
-}
-
-.category_2 {
-  font-weight: bold;
-  color: #000000;
-  background-color: #f7df87;
-  padding: 4px;
-  border-radius: 4px;
-}
-
-.category_3 {
-  font-weight: bold;
-  color: #000000;
-  background-color: #b0d992;
-  padding: 4px;
-  border-radius: 4px;
-}
-
-.category_4 {
-  font-weight: bold;
-  color: #000000;
-  background-color: #bdb5e1;
-  padding: 4px;
-  border-radius: 4px;
-}
-
-.category_5 {
-  font-weight: bold;
-  color: #000000;
-  background-color: #54beaa;
-  padding: 4px;
-  border-radius: 4px;
+div.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Height */
 }
