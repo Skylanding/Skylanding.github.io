@@ -388,9 +388,13 @@ I have a certain understanding of digital/analog circuits and computer architect
         </div>
         <br>
         <p>
-          A multi-channel video acquisition and acceleration system was implemented through Unisoc FPGA. 
-          It includes video input collection of two different transmission methods, HDMI/PCIE, onboard DDR video frame buffer, 
-          video output of HDMI/PCIE two methods, video splicing, scaling and other functions.
+        We developed a multi-channel video acquisition system with hardware acceleration on the Unisoc FPGA. 
+        We configured the YoLoV5 model on the host computer, collected video input via HDMI transmission, onboard DDR video frame buffer, and output via PCIE.
+        The FPGA acceleration was achieved using several techniques: 
+        1) optimized precision conversion, 
+        2) pipeline strategy, 
+        3) multi-channel and addition structure, 
+        and 4) DDR5 partition data sharing.
         </p>
       </td>
     </tr>
