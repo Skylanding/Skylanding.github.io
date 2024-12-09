@@ -1,3 +1,3 @@
 # My homepage
 
-Modified from a beautiful template from CUHK Research Group.
+Modified from a nice template, used by CUHK Research Group.
