@@ -1,20 +1,18 @@
 # 李煜 (Yu Li)
 
-<div class="pub-item">
+  **教育经历**
   <strong>乔治·华盛顿大学 (George Washington University)</strong>, 华盛顿特区
   <div class="authors">
     电子与计算机工程系 (ECE) 博士
   </div>
   <span class="meta">2025年9月 – 至今</span>
-</div>
 
-<div class="pub-item">
+
   <strong>武汉大学，弘毅学堂 (Wuhan University, Hongyi Honor College)</strong>, 中国武汉
   <div class="authors">
     微电子科学与技术 工学学士 (GPA: 3.87/4.0)
   </div>
   <span class="meta">2021年9月 – 2025年6月</span>
-</div>
 
 **研究方向: 强化学习 • 训练后优化 • 生成式AI**
 
