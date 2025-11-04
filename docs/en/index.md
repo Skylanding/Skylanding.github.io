@@ -179,9 +179,5 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
 - **Programming:** Python, C/C++, Matlab, Verilog
 - **Tools & Platforms:** Ubuntu, Docker, Pytorch, Tensorflow, Git, Cadence
 
----
 
-## Visitor Map
-
-<script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=EwT7Uk2_J7vnk06BmZ3u-RBpF7KH1euAgWAenPpNNKw"></script>
 
