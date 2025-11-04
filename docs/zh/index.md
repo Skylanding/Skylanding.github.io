@@ -179,8 +179,3 @@
 - **编程:** Python, C/C++, Matlab, Verilog
 - **工具 & 平台:** Ubuntu, Docker, Pytorch, Tensorflow, Git, Cadence
 
----
-
-## 访客地图 (Visitor Map)
-
-<script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=EwT7Uk2_J7vnk06BmZ3u-RBpF7KH1euAgWAenPpNNKw"></script>
