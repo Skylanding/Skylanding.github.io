@@ -1,5 +1,6 @@
 # Yu Li
 
+**Education**
   <strong>George Washington University</strong>, Washington, D.C.
   <div class="authors">
     Ph.D. in Electrical and Computer Engineering
