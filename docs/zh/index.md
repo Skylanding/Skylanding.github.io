@@ -1,6 +1,6 @@
 # 李煜 (Yu Li)
 
-  **教育经历**
+ 
   <strong>乔治·华盛顿大学 (George Washington University)</strong>, 华盛顿特区
   <div class="authors">
     电子与计算机工程系 (ECE) 博士
