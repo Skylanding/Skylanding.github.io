@@ -1,0 +1,43 @@
+# 1. 修正了您的网站名称
+site_name: Yu Li
+
+# 2. 按照您的要求，设置了 site_url
+site_url: https://skylanding.github.io/
+
+theme:
+  name: material
+  language: en
+
+# 3. 按照您的要求，将 "best friend" 改为了 HTML 链接
+copyright: 'This website was stolen from my <a href="https://maechd.github.io/">best friend</a>'
+
+plugins:
+  - search:
+      lang: [en, zh]
+  - i18n:
+      # 不要写 default_language
+      languages:
+        - locale: en
+          name: English
+          default: true      # 用这个来指定默认语言
+        - locale: zh
+          name: 简体中文
+      docs_structure: folder
+      reconfigure_material: true
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.mark       # ← 新增，可用 ==text== 语法
+
+
+nav:
+  - Home: index.md   # i18n 插件会自动在 docs/en/ 与 docs/zh/ 下找 index.md
+
+# 4. (清理) 您已改用新地图，不再需要 Leaflet 资源
+extra_css:
+  - assets/site.css          # ← 保留您自定义的样式
+
+extra_javascript:
+  # - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js  <-- 已删除
+  # - assets/map.js                                  <-- 已删除
