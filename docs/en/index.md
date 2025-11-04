@@ -1,21 +1,17 @@
 # Yu Li
 
-
-<div class="pub-item">
   <strong>George Washington University</strong>, Washington, D.C.
   <div class="authors">
     Ph.D. in Electrical and Computer Engineering
   </div>
   <span class="meta">Sept. 2025 – Present</span>
-</div>
 
-<div class="pub-item">
   <strong>Wuhan University, Hongyi Honor College</strong>, Wuhan, China
   <div class="authors">
     B.Eng. in Microelectronics Science and Technology (GPA: 3.87/4.0)
   </div>
   <span class="meta">Sept. 2021 – Jun. 2025</span>
-</div>
+
 **Research Topics: Reinforcement Learning • Post-Training • Generative AI**
 
 ![Yu Li](../img/YuLi_mid.jpg){ .avatar-left }
