@@ -1,13 +1,11 @@
-
 site_name: Yu Li
-
-# site_url: https://Skylanding.github.io/
-
+# site_url: https://<your-username>.github.io/<your-repo>/
 theme:
   name: material
   language: en
 
-copyright: 'This website was stolen from my <a href="https://maechd.github.io/">best friend</a>'
+# 用默认 docs_dir（就是 ./docs），不需要写 docs_dir: .
+# docs_dir: docs   #（可省略，默认就是 docs）
 
 plugins:
   - search:
@@ -32,9 +30,11 @@ markdown_extensions:
 nav:
   - Home: index.md   # i18n 插件会自动在 docs/en/ 与 docs/zh/ 下找 index.md
 
+# （可选）访客地图需要的 Leaflet 资源
 extra_css:
-  - assets/site.css 
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
+  - assets/site.css          # ← 新增：我们自定义的样式
 
 extra_javascript:
-  # - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js  <-- 已删除
-  # - assets/map.js                                  <-- 已删除
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
+  - assets/map.js  
