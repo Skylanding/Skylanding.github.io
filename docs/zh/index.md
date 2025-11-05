@@ -67,7 +67,7 @@
 
 <div class="pub-item">
   <strong>Prada: 在设备上利用私有数据进行黑盒LLM自适应</strong><br/>
-  <span class="meta">2025年1月 – 2025年4月</span>
+  <span class="meta">2025年1月 – 2025年4月</span> · <a href="https://arxiv.org/abs/2503.14932" target="_blank" rel="noopener">Paper</a></span>
   <div>通过概率差分方法在边缘设备系统上实现高效的黑盒LLM自适应，同时强有力地保护数据隐私。</div>
   <div class="chips">
     <span class="chip">黑盒LLM</span><span class="chip">边缘AI</span><span class="chip">隐私保护</span>
@@ -89,9 +89,12 @@
 <div class="pub-item">
   <strong>DLoRA-TrOCR: 基于Transformer的混合文本模式光学字符识别</strong><br/>
   <div class="authors">
-    <b>Y. Li</b>, D. Chang
+    <b>Yu Li*</b>, Chang Da*
   </div>
-  <span class="meta"><span class="text-blue"><i>ICONIP</i></span>, 2024</span>
+  <div>
+  <span class="meta">(*:Equal contribution)</span>
+  </div>
+  <span class="meta"><span class="text-blue"><i>ICONIP</i></span> 2024</span> <a href="https://arxiv.org/pdf/2404.12734" target="_blank" rel="noopener">Paper</a> · <a href="https://github.com/MaeChd/DLoRA-TrOCR" target="_blank" rel="noopener">Code</a></span>
   <div>基于TrOCR的OCR，采用高效PEFT处理混合文本；实用的流程和评估。</div>
   <div class="chips">
     <span class="chip">OCR</span><span class="chip">LoRA</span>
