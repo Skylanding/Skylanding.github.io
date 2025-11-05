@@ -66,7 +66,7 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
 
 <div class="pub-item">
   <strong>Prada: Black-Box LLM Adaptation with Private Data on Devices</strong><br/>
-  <span class="meta">Jan. 2025 – Apr. 2025</span>·<a href="https://arxiv.org/abs/2503.14932" target="_blank" rel="noopener">Paper</a></span>
+  <span class="meta">Jan. 2025 – Apr. 2025</span> · <a href="https://arxiv.org/abs/2503.14932" target="_blank" rel="noopener">Paper</a></span>
   <div>Achieving efficient black-box LLM adaptation on edge device systems through probability differential methods while robustly preserving data privacy.</div>
   <div class="chips">
     <span class="chip">Black-Box LLM</span><span class="chip">Edge AI</span><span class="chip">Privacy</span>
