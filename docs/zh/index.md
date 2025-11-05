@@ -7,7 +7,6 @@
   </div>
   <span class="meta">2025年9月 – 至今</span>
 
-
   <strong>武汉大学，弘毅学堂 (Wuhan University, Hongyi Honor College)</strong>, 中国武汉
   <div class="authors">
     微电子科学与技术 工学学士 (GPA: 3.87/4.0)
