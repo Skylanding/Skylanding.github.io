@@ -13,13 +13,13 @@
   </div>
   <span class="meta">2021年9月 – 2025年6月</span>
 
-**研究方向: 强化学习 • 训练后优化 • 生成式AI**
+**研究方向: 强化学习 • 后训练优化 • 生成式AI**
 
 ![Yu Li](../img/YuLi_mid.jpg){ .avatar-left }
 
 我目前是<a href="https://www.ece.gwu.edu/">乔治·华盛顿大学</a>ECE系的一年级博士生，导师是 <a href="https://www.tianlan.org/">Tian Lan</a> 教授。我本科毕业于<a href="https://en.whu.edu.cn/">武汉大学</a><a href="https://hyxt.whu.edu.cn/">弘毅学堂</a>。
 
-我的研究兴趣主要集中在**生成式AI (Generative AI)**、**强化学习 (RL)** 以及大语言模型的**训练后 (Post-training)** 方法。我始终对交流和合作持开放态度。
+我的研究兴趣主要集中在**生成式AI (Generative AI)**、**强化学习 (RL)** 以及大语言模型的**训练后 (Post-training)** 方法。我非常欢迎合作和交流。
 
 - 📄 **[简历 (CV)](../file/CV_Yu_Li.pdf)**
 - 🧪 **[GitHub](https://github.com/skylanding)**
