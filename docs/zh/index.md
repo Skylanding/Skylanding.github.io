@@ -16,7 +16,7 @@
 
 **研究方向: 强化学习 • 训练后优化 • 生成式AI**
 
-![Yu Li](../img/YuLi_mid.jpg){ .avatar-left }
+![Yu Li](../img/2022_davis.png){.avatar-left }
 
 我目前是<a href="https://www.ece.gwu.edu/">乔治·华盛顿大学</a>ECE系的一年级博士生，导师是 <a href="https://www.tianlan.org/">Tian Lan</a> 教授。我本科毕业于<a href="https://en.whu.edu.cn/">武汉大学</a><a href="https://hyxt.whu.edu.cn/">弘毅学堂</a>。
 
