@@ -161,10 +161,10 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
 
 ## Honors and Awards
 
-- **Innova International Exchange Scholarship**, Wuhan University, **2024**
-- **Innova Excellence Scholarship (Top 3%)**, Wuhan University, **2023, 2024**
-- **Academic Excellence Scholarship (Top 5%)**, Hongyi Honor College, **2022, 2023, 2024**
-- **First-Class Scholarship (Top 5%)**, Wuhan University, **2022, 2023, 2024**
+- Innova International Exchange Scholarship, Wuhan University, 2024
+- Innova Excellence Scholarship (Top 3%), Wuhan University, 2023, 2024
+- Academic Excellence Scholarship (Top 5%), Hongyi Honor College, 2022, 2023, 2024
+- First-Class Scholarship (Top 5%), Wuhan University, 2022, 2023, 2024
 - Patent: Energy-saving calculation method, <a href="https://patents.google.com/patent/CN116085952B/en">CN116085952</a>.
 
 ---
@@ -174,7 +174,7 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
 - **Languages:** English (TOEFL 110), Chinese (Native), Japanese (N5)
 - **Programming:** Python, C/C++, Matlab, Verilog
 - **Tools & Platforms:** Ubuntu, Docker, Pytorch, Tensorflow, Git, Cadence
-
+- **Framework:** OpenRLHF, Verl, TRL
 
 
 This website was stolen from my <a href="https://maechd.github.io/">best friend CD.</a>
