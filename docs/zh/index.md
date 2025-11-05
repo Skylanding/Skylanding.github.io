@@ -1,12 +1,12 @@
 # 李煜 (Yu Li)
 
  
-  <strong>乔治·华盛顿大学 (George Washington University)</strong>, 华盛顿特区. 2025.9至今
+  <strong>乔治·华盛顿大学 (George Washington University)</strong>, 华盛顿特区. *2025.9至今*
   <div class="authors">
     电子与计算机工程系 (ECE) 博士
   </div>
 
-  <strong>武汉大学，弘毅学堂 (Wuhan University, Hongyi Honor College)</strong> 2021级
+  <strong>武汉大学(Wuhan University)</strong> *弘毅学堂2021级*
   <div class="authors">
     微电子科学与技术 工学学士 (GPA: 3.87/4.0)
   </div>
