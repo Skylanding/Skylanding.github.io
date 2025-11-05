@@ -66,7 +66,7 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
 
 <div class="pub-item">
   <strong>Prada: Black-Box LLM Adaptation with Private Data on Devices</strong><br/>
-  <span class="meta">Jan. 2025 – Apr. 2025</span>
+  <span class="meta">Jan. 2025 – Apr. 2025</span>·<a href="https://arxiv.org/abs/2503.14932" target="_blank" rel="noopener">Paper</a></span>
   <div>Achieving efficient black-box LLM adaptation on edge device systems through probability differential methods while robustly preserving data privacy.</div>
   <div class="chips">
     <span class="chip">Black-Box LLM</span><span class="chip">Edge AI</span><span class="chip">Privacy</span>
@@ -78,7 +78,7 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
   <div class="authors">
     <b>Y. Li</b>, J. Wang, P. Khargonekar, and M. A. A. Faruque
   </div>
-  <span class="meta"><span class="text-blue"><i>WACV</i></span>, 2026 · <a href="https://github.com/Skylanding/SensorFusion" target="_blank" rel="noopener">Code</a></span>
+  <span class="meta"><span class="text-blue"><i>WACV</i></span> 2026 · <a href="https://github.com/Skylanding/SensorFusion" target="_blank" rel="noopener">Code</a></span>
   <div>Our main work is to construct our VLM to improve the autonomous driving mode in abnormal weather conditions, focusing on improving the multi-modal fusion algorithm of Camera-Lidar branches.</div>
   <div class="chips">
     <span class="chip">Autonomous Driving</span><span class="chip">Sensor Fusion</span><span class="chip">Vision Language Model</span>
@@ -93,7 +93,7 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
   <div>
   <span class="meta">(*:Equal contribution)</span>
   </div>
-  <span class="meta"><span class="text-blue"><i>ICONIP</i></span> 2024</span> <a href="https://arxiv.org/pdf/2404.12734" target="_blank" rel="noopener">PDF</a> · <a href="https://github.com/MaeChd/DLoRA-TrOCR" target="_blank" rel="noopener">Code</a></span>
+  <span class="meta"><span class="text-blue"><i>ICONIP</i></span> 2024</span> <a href="https://arxiv.org/pdf/2404.12734" target="_blank" rel="noopener">Paper</a> · <a href="https://github.com/MaeChd/DLoRA-TrOCR" target="_blank" rel="noopener">Code</a></span>
   <div>TrOCR-based OCR with efficient PEFT for mixed text; practical pipeline and evaluation.</div>
   <div class="chips">
     <span class="chip">OCR</span><span class="chip">LoRA</span>
