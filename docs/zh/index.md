@@ -7,7 +7,7 @@
   </div>
   <span class="meta">2025年9月 – 至今</span>
 
-  <strong>武汉大学，弘毅学堂 (Wuhan University, Hongyi Honor College)</strong>, 中国武汉
+  <strong>武汉大学，弘毅学堂 (Wuhan University, Hongyi Honor College)</strong>, 武汉
   <div class="authors">
     微电子科学与技术 工学学士 (GPA: 3.87/4.0)
   </div>
@@ -45,7 +45,7 @@
   <span class="meta">2025年8月 – 至今</span>
   <div>利用偏好对中的隐式偏好信息建立自我改进机制，推广现有偏好优化方法的理论基础，以增强LLM对齐。</div>
   <div class="chips">
-    <span class="chip">LLM 对齐</span><span class="chip">偏好优化</span>
+    <span class="chip">DPO</span><span class="chip">SimPO</span><span class="chip">偏好学习</span>
   </div>
 </div>
 
@@ -54,7 +54,7 @@
   <span class="meta">2025年9月 – 至今</span>
   <div>使LLM通过结构化对齐学习有限状态机的状态转换逻辑，构建用于Verilog代码合成的多轮生成范式。</div>
   <div class="chips">
-    <span class="chip">LLM 对齐</span><span class="chip">Verilog 生成</span><span class="chip">FSM</span>
+    <span class="chip">RLVR</span><span class="chip">LLM代码生成</span><span class="chip">Verilog 状态机</span>
   </div>
 </div>
 
@@ -63,7 +63,7 @@
   <span class="meta">2025年4月 – 2025年7月</span>
   <div>通过秩空间约束微调增强内容-风格LoRA分解，并通过提示映射和非对称CFG实现风格-内容LoRA融合，以实现个性化图像生成。</div>
   <div class="chips">
-    <span class="chip">生成式AI</span><span class="chip">个性化</span><span class="chip">LoRA</span>
+    <span class="chip">生成式AI</span><span class="chip">个性化生图</span><span class="chip">LoRA</span>
   </div>
 </div>
 
@@ -84,7 +84,7 @@
   <span class="meta"><span class="text-blue"><i>WACV</i></span>, 2026 · <a href="https://github.com/Skylanding/SensorFusion" target="_blank" rel="noopener">代码</a></span>
   <div>我们的主要工作是构建VLM以改善异常天气条件下的自动驾驶模式，重点改进摄像头-激光雷达分支的多模态融合算法。</div>
   <div class="chips">
-    <span class="chip">自动驾驶</span><span class="chip">传感器融合</span><span class="chip">VLM</span>
+    <span class="chip">自动驾驶</span><span class="chip">传感器融合</span><span class="chip">视觉-语言模型</span>
   </div>
 </div>
 
@@ -96,7 +96,7 @@
   <span class="meta"><span class="text-blue"><i>ICONIP</i></span>, 2024</span>
   <div>基于TrOCR的OCR，采用高效PEFT处理混合文本；实用的流程和评估。</div>
   <div class="chips">
-    <span class="chip">OCR</span><span class="chip">Transformer</span>
+    <span class="chip">OCR</span><span class="chip">LoRA</span>
   </div>
 </div>
 
@@ -120,7 +120,7 @@
   <span class="meta"><span class="text-blue"><i>IJCARS</i></span>, 2025 · <a href="https://link.springer.com/article/10.1007/s11548-025-03333-0" target="_blank" rel="noopener">论文</a> · <a href="https://github.com/Skylanding" target="_blank" rel="noopener">代码</a></span>
   <div>针对内窥镜医疗场景，我们使用扩散模型进行深度估计。我们构建了一个教师模型，设置了知识蒸馏、光学外观和ddim损失，并引入了教师的判别先验，显著提高了结果的准确性和置信度。</div>
   <div class="chips">
-    <span class="chip">深度估计</span><span class="chip">扩散模型</span><span class="chip">内窥镜</span>
+    <span class="chip">深度估计</span><span class="chip">扩散模型</span><span class="chip">知识蒸馏</span>
   </div>
 </div>
 
