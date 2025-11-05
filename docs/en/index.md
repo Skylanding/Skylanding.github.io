@@ -6,7 +6,7 @@
   </div>
   <span class="meta">Sept. 2025 – Present</span>
 
-  <strong>Wuhan University, Hongyi Honor College</strong>, Wuhan, China
+  <strong>Wuhan University</strong>, Hongyi Honor College, China
   <div class="authors">
     B.Eng. in Microelectronics Science and Technology (GPA: 3.87/4.0)
   </div>
@@ -44,7 +44,7 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
   <span class="meta">Aug. 2025 – Present</span>
   <div>Leveraging implicit preference information within preference pairs to establish a self-improvement mechanism, generalizing the theoretical foundation of existing preference optimization methods to enhance LLM alignment.</div>
   <div class="chips">
-    <span class="chip">LLM Alignment</span><span class="chip">Preference Optimization</span>
+    <span class="chip">DPO</span><span class="chip">SimPO</span><span class="chip">Preference Learning</span>
   </div>
 </div>
 
@@ -53,7 +53,7 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
   <span class="meta">Sept. 2025 – Present</span>
   <div>Enabling LLMs to learn state transition logic of finite state machines through structured alignment, constructing a multi-turn generation paradigm for Verilog code synthesis.</div>
   <div class="chips">
-    <span class="chip">LLM Alignment</span><span class="chip">Verilog Generation</span><span class="chip">FSM</span>
+    <span class="chip">RLVR</span><span class="chip">Code Generation</span><span class="chip">Verilog FSM</span>
   </div>
 </div>
 
@@ -83,7 +83,7 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
   <span class="meta"><span class="text-blue"><i>WACV</i></span>, 2026 · <a href="https://github.com/Skylanding/SensorFusion" target="_blank" rel="noopener">Code</a></span>
   <div>Our main work is to construct our VLM to improve the autonomous driving mode in abnormal weather conditions, focusing on improving the multi-modal fusion algorithm of Camera-Lidar branches.</div>
   <div class="chips">
-    <span class="chip">Autonomous Driving</span><span class="chip">Sensor Fusion</span><span class="chip">VLM</span>
+    <span class="chip">Autonomous Driving</span><span class="chip">Sensor Fusion</span><span class="chip">Vision Language Model</span>
   </div>
 </div>
 
@@ -95,7 +95,7 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
   <span class="meta"><span class="text-blue"><i>ICONIP</i></span>, 2024</span>
   <div>TrOCR-based OCR with efficient PEFT for mixed text; practical pipeline and evaluation.</div>
   <div class="chips">
-    <span class="chip">OCR</span><span class="chip">Transformer</span>
+    <span class="chip">OCR</span><span class="chip">LoRA</span>
   </div>
 </div>
 
@@ -119,7 +119,7 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
   <span class="meta"><span class="text-blue"><i>IJCARS</i></span>, 2025 · <a href="https://link.springer.com/article/10.1007/s11548-025-03333-0" target="_blank" rel="noopener">Paper</a> · <a href="https://github.com/Skylanding" target="_blank" rel="noopener">Code</a></span>
   <div>For endoscope medical scenarios, we use the diffusion model for depth estimation. We build a teacher model, set knowledge distillation, optical appearance and ddim losses, and introduce the teacher's discriminative prior, which significantly enhances the accuracy and confidence of the results.</div>
   <div class="chips">
-    <span class="chip">Depth Estimation</span><span class="chip">Diffusion Model</span><span class="chip">Endoscopy</span>
+    <span class="chip">Depth Estimation</span><span class="chip">Diffusion Model</span><span class="chip">Distillation</span>
   </div>
 </div>
 
@@ -161,10 +161,10 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
 
 ## Honors and Awards
 
-- **Innova International Exchange Scholarship**, Wuhan University, **2024**
-- **Innova Excellence Scholarship (Top 3%)**, Wuhan University, **2023, 2024**
-- **Academic Excellence Scholarship (Top 5%)**, Hongyi Honor College, **2022, 2023, 2024**
-- **First-Class Scholarship (Top 5%)**, Wuhan University, **2022, 2023, 2024**
+- Innova International Exchange Scholarship, Wuhan University, 2024
+- Innova Excellence Scholarship (Top 3%), Wuhan University, 2023, 2024
+- Academic Excellence Scholarship (Top 5%), Hongyi Honor College, 2022, 2023, 2024
+- First-Class Scholarship (Top 5%), Wuhan University, 2022, 2023, 2024
 - Patent: Energy-saving calculation method, <a href="https://patents.google.com/patent/CN116085952B/en">CN116085952</a>.
 
 ---
