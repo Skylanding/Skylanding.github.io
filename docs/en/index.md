@@ -78,7 +78,7 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
   <div class="authors">
     <b>Y. Li</b>, J. Wang, P. Khargonekar, and M. A. A. Faruque
   </div>
-  <span class="meta"><span class="text-blue"><i>WACV</i></span> 2026 · <a href="https://github.com/Skylanding/SensorFusion" target="_blank" rel="noopener">Code</a></span>
+  <span class="meta"><span class="text-blue"><i>WACV 2026</i></span> · <a href="https://github.com/Skylanding/SensorFusion" target="_blank" rel="noopener">Code</a></span>
   <div>Our main work is to construct our VLM to improve the autonomous driving mode in abnormal weather conditions, focusing on improving the multi-modal fusion algorithm of Camera-Lidar branches.</div>
   <div class="chips">
     <span class="chip">Autonomous Driving</span><span class="chip">Sensor Fusion</span><span class="chip">Vision Language Model</span>
@@ -93,7 +93,7 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
   <div>
   <span class="meta">(*:Equal contribution)</span>
   </div>
-  <span class="meta"><span class="text-blue"><i>ICONIP</i></span> 2024</span> <a href="https://arxiv.org/pdf/2404.12734" target="_blank" rel="noopener">Paper</a> · <a href="https://github.com/MaeChd/DLoRA-TrOCR" target="_blank" rel="noopener">Code</a></span>
+  <span class="meta"><span class="text-blue"><i>ICONIP 2024</i></span></span> <a href="https://arxiv.org/pdf/2404.12734" target="_blank" rel="noopener">Paper</a> · <a href="https://github.com/MaeChd/DLoRA-TrOCR" target="_blank" rel="noopener">Code</a></span>
   <div>TrOCR-based OCR with efficient PEFT for mixed text; practical pipeline and evaluation.</div>
   <div class="chips">
     <span class="chip">OCR</span><span class="chip">LoRA</span>
@@ -105,7 +105,7 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
   <div class="authors">
     <b>Y. Li</b>, J. Huang et al.
   </div>
-  <span class="meta"><span class="text-blue"><i>Medical Physics</i></span>, 2025 · <a href="https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.17751" target="_blank" rel="noopener">Paper</a> · <a href="https://github.com/Skylanding/DSATNet" target="_blank" rel="noopener">Code</a></span>
+  <span class="meta"><span class="text-blue"><i>Medical Physics. JCR Q1</i></span>, 2025 · <a href="https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.17751" target="_blank" rel="noopener">Paper</a> · <a href="https://github.com/Skylanding/DSATNet" target="_blank" rel="noopener">Code</a></span>
   <div>We leveraged the rich semantic segmentation information of SAM and applied its fine-grained attention capability to the feature extraction module of Transformer, achieving SOTA IoU scores in ultrasound image segmentation.</div>
   <div class="chips">
     <span class="chip">Ultrasound Segmentation</span><span class="chip">SAM</span><span class="chip">Transformer</span>
@@ -117,7 +117,7 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
   <div class="authors">
     <b>Y. Li</b>, D. Chang et al.
   </div>
-  <span class="meta"><span class="text-blue"><i>IJCARS</i></span>, 2025 · <a href="https://link.springer.com/article/10.1007/s11548-025-03333-0" target="_blank" rel="noopener">Paper</a> · <a href="https://github.com/Skylanding/SfM-Diffusion" target="_blank" rel="noopener">Code</a></span>
+  <span class="meta"><span class="text-blue"><i> International Journal of Computer Assisted Radiology and Surgery. JCR Q2</i></span>, 2025 · <a href="https://link.springer.com/article/10.1007/s11548-025-03333-0" target="_blank" rel="noopener">Paper</a> · <a href="https://github.com/Skylanding/SfM-Diffusion" target="_blank" rel="noopener">Code</a></span>
   <div>For endoscope medical scenarios, we use the diffusion model for depth estimation. We build a teacher model, set knowledge distillation, optical appearance and ddim losses, and introduce the teacher's discriminative prior, which significantly enhances the accuracy and confidence of the results.</div>
   <div class="chips">
     <span class="chip">Depth Estimation</span><span class="chip">Diffusion Model</span><span class="chip">Distillation</span>
