@@ -176,6 +176,7 @@
 - **语言:** 英语 (托福 110), 中文 (母语), 日语 (N5)
 - **编程:** Python, C/C++, Matlab, Verilog
 - **工具 & 平台:** Ubuntu, Docker, Pytorch, Tensorflow, Git, Cadence
+---
 
 
 这个网站模版是从我<a href="https://maechd.github.io/">最好的朋友</a>那里偷来的。
