@@ -1,11 +1,11 @@
 # Yu Li
 
-  <strong>George Washington University</strong>, Washington, D.C. (2025.9– Present)
+  <strong>George Washington University</strong>, Washington, D.C. *2025.9– Present*
   <div class="authors">
     Ph.D. in Electrical and Computer Engineering
   </div>
 
-  <strong>Wuhan University</strong>, Hongyi Honor College, China (2021.9-2025.5)
+  <strong>Wuhan University</strong>, Hongyi Honor College, China *2021.9-2025.5*
   <div class="authors">
     B.Eng. in Microelectronics Science and Technology (GPA: 3.87/4.0)
   </div>
