@@ -79,7 +79,7 @@
   <div class="authors">
     <b>Y. Li</b>, J. Wang, P. Khargonekar, and M. A. A. Faruque
   </div>
-  <span class="meta"><span class="text-blue"><i>WACV</i></span>, 2026 · <a href="https://github.com/Skylanding/SensorFusion" target="_blank" rel="noopener">代码</a></span>
+  <span class="meta"><span class="text-blue"><i>WACV 2026</i></span> · <a href="https://github.com/Skylanding/SensorFusion" target="_blank" rel="noopener">代码</a></span>
   <div>我们的主要工作是构建VLM以改善异常天气条件下的自动驾驶模式，重点改进摄像头-激光雷达分支的多模态融合算法。</div>
   <div class="chips">
     <span class="chip">自动驾驶</span><span class="chip">传感器融合</span><span class="chip">视觉-语言模型</span>
@@ -94,7 +94,7 @@
   <div>
   <span class="meta">(*:Equal contribution)</span>
   </div>
-  <span class="meta"><span class="text-blue"><i>ICONIP</i></span> 2024</span> <a href="https://arxiv.org/pdf/2404.12734" target="_blank" rel="noopener">Paper</a> · <a href="https://github.com/MaeChd/DLoRA-TrOCR" target="_blank" rel="noopener">Code</a></span>
+  <span class="meta"><span class="text-blue"><i>ICONIP 2024</i></span></span> <a href="https://arxiv.org/pdf/2404.12734" target="_blank" rel="noopener">Paper</a> · <a href="https://github.com/MaeChd/DLoRA-TrOCR" target="_blank" rel="noopener">Code</a></span>
   <div>基于TrOCR的OCR，采用高效PEFT处理混合文本；实用的流程和评估。</div>
   <div class="chips">
     <span class="chip">OCR</span><span class="chip">LoRA</span>
@@ -106,7 +106,7 @@
   <div class="authors">
     <b>Y. Li</b>, J. Huang et al.
   </div>
-  <span class="meta"><span class="text-blue"><i>Medical Physics</i></span>, 2025 · <a href="https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.17751" target="_blank" rel="noopener">论文</a> · <a href="https://github.com/Skylanding/DSATNet" target="_blank" rel="noopener">代码</a></span>
+  <span class="meta"><span class="text-blue"><i>Medical Physics. Q1</i></span>, 2025 · <a href="https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.17751" target="_blank" rel="noopener">论文</a> · <a href="https://github.com/Skylanding/DSATNet" target="_blank" rel="noopener">代码</a></span>
   <div>我们利用SAM丰富的语义分割信息，并将其细粒度注意力能力应用于Transformer的特征提取模块，在超声图像分割中实现了SOTA的IoU分数。</div>
   <div class="chips">
     <span class="chip">超声分割</span><span class="chip">SAM</span><span class="chip">Transformer</span>
@@ -118,7 +118,7 @@
   <div class="authors">
     <b>Y. Li</b>, D. Chang et al.
   </div>
-  <span class="meta"><span class="text-blue"><i>IJCARS</i></span>, 2025 · <a href="https://link.springer.com/article/10.1007/s11548-025-03333-0" target="_blank" rel="noopener">论文</a> · <a href="https://github.com/Skylanding" target="_blank" rel="noopener">代码</a></span>
+  <span class="meta"><span class="text-blue"><i> International Journal of Computer Assisted Radiology and Surgery. Q2</i></span>, 2025 · <a href="https://link.springer.com/article/10.1007/s11548-025-03333-0" target="_blank" rel="noopener">论文</a> · <a href="https://github.com/Skylanding" target="_blank" rel="noopener">代码</a></span>
   <div>针对内窥镜医疗场景，我们使用扩散模型进行深度估计。我们构建了一个教师模型，设置了知识蒸馏、光学外观和ddim损失，并引入了教师的判别先验，显著提高了结果的准确性和置信度。</div>
   <div class="chips">
     <span class="chip">深度估计</span><span class="chip">扩散模型</span><span class="chip">知识蒸馏</span>
