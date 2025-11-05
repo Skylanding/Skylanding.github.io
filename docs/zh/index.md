@@ -16,7 +16,7 @@
 
 **研究方向: 强化学习 • 训练后优化 • 生成式AI**
 
-![Yu Li](../img/2022davis.jpg){.avatar-left }
+![Yu Li](../img/YuLi_mid.jpg){ .avatar-left }
 
 我目前是<a href="https://www.ece.gwu.edu/">乔治·华盛顿大学</a>ECE系的一年级博士生，导师是 <a href="https://www.tianlan.org/">Tian Lan</a> 教授。我本科毕业于<a href="https://en.whu.edu.cn/">武汉大学</a><a href="https://hyxt.whu.edu.cn/">弘毅学堂</a>。
 
@@ -163,10 +163,10 @@
 
 ## 荣誉奖项 (Honors and Awards)
 
-- 英诺国际交流奖学金, 武汉大学, **2024**
-- 英诺卓越奖学金 (Top 3%), 武汉大学, **2023, 2024**
-- 学业一等奖学金 (Top 5%), 弘毅学堂, **2022, 2023, 2024**
-- 甲等奖学金 (Top 5%), 武汉大学, **2022, 2023, 2024**
+- **英诺国际交流奖学金**, 武汉大学, **2024**
+- **英诺卓越奖学金 (Top 3%)**, 武汉大学, **2023, 2024**
+- **学术优秀奖学金 (Top 5%)**, 弘毅学堂, **2022, 2023, 2024**
+- **甲等奖学金 (Top 5%)**, 武汉大学, **2022, 2023, 2024**
 - 专利: 一种节能计算方法, <a href="https://patents.google.com/patent/CN116085952B/en">CN116085952</a>.
 
 ---
@@ -176,7 +176,6 @@
 - **语言:** 英语 (托福 110), 中文 (母语), 日语 (N5)
 - **编程:** Python, C/C++, Matlab, Verilog
 - **工具 & 平台:** Ubuntu, Docker, Pytorch, Tensorflow, Git, Cadence
----
 
 
 这个网站模版是从我<a href="https://maechd.github.io/">最好的朋友</a>那里偷来的。
