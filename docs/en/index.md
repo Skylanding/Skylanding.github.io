@@ -14,7 +14,7 @@
 
 **Research Topics: Reinforcement Learning • Post-Training • Generative AI**
 
-![Yu Li](../img/2022_davis.png){ .avatar-left }
+![Yu Li](../img/2022davis.png){ .avatar-left }
 
 I am currently a first-year Ph.D. student in the ECE Department at <a href="https://www.ece.gwu.edu/">George Washington University</a>, supervised by Prof. Tian Lan. I obtained my B.Eng. degree from the <a href="https://hyxt.whu.edu.cn/">Hongyi Honor College</a> of <a href="https://en.whu.edu.cn/">Wuhan University</a>.
 
