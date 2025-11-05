@@ -88,9 +88,12 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
 <div class="pub-item">
   <strong>DLoRA-TrOCR: Mixed Text Mode Optical Character Recognition Based On Transformer</strong><br/>
   <div class="authors">
-    <b>Y. Li</b>, D. Chang
+    <b>Yu Li*</b>, Chang Da*
   </div>
-  <span class="meta"><span class="text-blue"><i>ICONIP</i></span>, 2024</span>
+  <div>
+  <span class="meta">(*:Equal contribution)</span>
+  </div>
+  <span class="meta"><span class="text-blue"><i>ICONIP</i></span> 2024</span> <a href="https://arxiv.org/pdf/2404.12734" target="_blank" rel="noopener">PDF</a> · <a href="https://github.com/MaeChd/DLoRA-TrOCR" target="_blank" rel="noopener">Code</a></span>
   <div>TrOCR-based OCR with efficient PEFT for mixed text; practical pipeline and evaluation.</div>
   <div class="chips">
     <span class="chip">OCR</span><span class="chip">LoRA</span>
@@ -114,7 +117,7 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
   <div class="authors">
     <b>Y. Li</b>, D. Chang et al.
   </div>
-  <span class="meta"><span class="text-blue"><i>IJCARS</i></span>, 2025 · <a href="https://link.springer.com/article/10.1007/s11548-025-03333-0" target="_blank" rel="noopener">Paper</a> · <a href="https://github.com/Skylanding" target="_blank" rel="noopener">Code</a></span>
+  <span class="meta"><span class="text-blue"><i>IJCARS</i></span>, 2025 · <a href="https://link.springer.com/article/10.1007/s11548-025-03333-0" target="_blank" rel="noopener">Paper</a> · <a href="https://github.com/Skylanding/SfM-Diffusion" target="_blank" rel="noopener">Code</a></span>
   <div>For endoscope medical scenarios, we use the diffusion model for depth estimation. We build a teacher model, set knowledge distillation, optical appearance and ddim losses, and introduce the teacher's discriminative prior, which significantly enhances the accuracy and confidence of the results.</div>
   <div class="chips">
     <span class="chip">Depth Estimation</span><span class="chip">Diffusion Model</span><span class="chip">Distillation</span>
