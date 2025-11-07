@@ -93,7 +93,7 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
   <div>
   <span class="meta">(*:Equal contribution)</span>
   </div>
-  <span class="meta"><span class="text-blue"><i>ICONIP 2024</i></span></span> <a href="https://arxiv.org/pdf/2404.12734" target="_blank" rel="noopener">Paper</a> · <a href="https://github.com/MaeChd/DLoRA-TrOCR" target="_blank" rel="noopener">Code</a></span>
+  <span class="meta"><span class="text-blue"><i>ICONIP 2024</i></span></span> · <a href="https://arxiv.org/pdf/2404.12734" target="_blank" rel="noopener">Paper</a> · <a href="https://github.com/MaeChd/DLoRA-TrOCR" target="_blank" rel="noopener">Code</a></span>
   <div>TrOCR-based OCR with efficient PEFT for mixed text; practical pipeline and evaluation.</div>
   <div class="chips">
     <span class="chip">OCR</span><span class="chip">LoRA</span>
