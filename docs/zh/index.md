@@ -28,7 +28,8 @@
 ---
 
 ## 近期动态 (News)
-- **[04/2025]** 我在乔治·华盛顿大学开始了我的博士生涯，导师是 Tian Lan 教授。
+- **[10/2025]** 我们的工作 *Calibrating and Rotating: A Unified Framework for Weight Conditioning in PEFT* 被 AAAI 2026 接收 🎉.
+- **[04/2025]** 我在乔治·华盛顿大学开始了我的博士生涯，导师是 Tian Lan 教授 🎓。
 - **[03/2025]** 我加入了 AGI 实验室进行毕业前实习，主要研究生成模型。
 - **[08/2024]** 我获得了英诺卓越奖学金 (Innova Excellence Scholarship) (Top 3%)。
 
