@@ -27,8 +27,8 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
 ---
 
 ## News
-- **[11/2025]** Our work *Calibrating and Rotating: A Unified Framework for Weight Conditioning in PEFT* was accepted at AAAI 2026.
-- **[04/2025]** I started my ECE PhD journey at GWU, supervised by Prof.Tian Lan.
+- **[11/2025]** Our work *Calibrating and Rotating: A Unified Framework for Weight Conditioning in PEFT* was accepted at AAAI 2026 🎉.
+- **[04/2025]** I started my ECE PhD journey at GWU, supervised by Prof.Tian Lan 🎓.
 - **[03/2025]** I joined the AGI Lab for a pre-graduation intern, focusing on generative models.
 - **[08/2024]** I was awarded the Innova Excellence Scholarship (Top 3%).
 
