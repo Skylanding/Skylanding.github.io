@@ -75,14 +75,14 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
 </div>
 
 <div class="pub-item">
-  <strong>Vision-Language Model-Guided Uncertainty-Aware Cross-Modal Sensor Fusion for Autonomous Vehicles</strong><br/>
+  <strong>Calibrating and Rotating: A Unified Framework for Weight Conditioning in PEFT</strong><br/>
   <div class="authors">
-    <b>Y. Li</b>, J. Wang, P. Khargonekar, and M. A. A. Faruque
+    Da Chang, Peng Xue, <b>Yu Li</b> , Yongxiang Liu, Pengxiang Xu, Shixun Zhang
   </div>
-  <span class="meta"><span class="text-blue"><i>WACV 2026</i></span> · <a href="https://github.com/Skylanding/SensorFusion" target="_blank" rel="noopener">Code</a></span>
-  <div>Our main work is to construct our VLM to improve the autonomous driving mode in abnormal weather conditions, focusing on improving the multi-modal fusion algorithm of Camera-Lidar branches.</div>
+  <span class="meta"><span class="text-blue"><i>AAAI 2026</i></span> · <a href="https://arxiv.org/pdf/2511.00051" target="_blank" rel="noopener">PDF</a> · <a href="https://github.com/MaeChd/SORA" target="_blank" rel="noopener">Code</a></span>
+  <div>Analyze the properties of DoRA and LoRA, and unify the “calibration + rotation” weight conditioning strategy to enhance the performance and training-inference efficiency of PEFT.</div>
   <div class="chips">
-    <span class="chip">Autonomous Driving</span><span class="chip">Sensor Fusion</span><span class="chip">Vision Language Model</span>
+    <span class="chip">LLMs PEFT</span><span class="chip">Weight Conditioning</span>
   </div>
 </div>
 
