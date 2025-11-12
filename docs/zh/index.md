@@ -40,7 +40,7 @@
 <div class="pub-list">
 
 <div class="pub-item">
-  <strong>在LLM对齐中解锁偏好优化的隐式自反思</strong><br/>
+  <strong>Unlocking Implicit Self-Reflection in Preference Optimization for LLM Alignment</strong><br/>
   <span class="meta">2025年8月 – 至今</span>
   <div>利用偏好对中的隐式偏好信息建立自我改进机制，推广现有偏好优化方法的理论基础，以增强LLM对齐。</div>
   <div class="chips">
@@ -49,7 +49,7 @@
 </div>
 
 <div class="pub-item">
-  <strong>对齐LLM与有限状态机逻辑以生成多轮Verilog代码</strong><br/>
+  <strong>Aligning LLMs with Finite State Machine Logic for Multi-turn Verilog Code Generation</strong><br/>
   <span class="meta">2025年9月 – 至今</span>
   <div>使LLM通过结构化对齐学习有限状态机的状态转换逻辑，构建用于Verilog代码合成的多轮生成范式。</div>
   <div class="chips">
@@ -58,7 +58,7 @@
 </div>
 
 <div class="pub-item">
-  <strong>CRAFT-LORA: 通过秩约束自适应实现内容-风格个性化</strong><br/>
+  <strong>CRAFT-LORA: Content-Style Personalization via Rank-Constrained Adaptation</strong><br/>
   <span class="meta">2025年4月 – 2025年7月</span>
   <div>通过秩空间约束微调增强内容-风格LoRA分解，并通过提示映射和非对称CFG实现风格-内容LoRA融合，以实现个性化图像生成。</div>
   <div class="chips">
@@ -67,7 +67,7 @@
 </div>
 
 <div class="pub-item">
-  <strong>Prada: 在设备上利用私有数据进行黑盒LLM自适应</strong><br/>
+  <strong>Prada: Black-Box LLM Adaptation with Private Data on Devices</strong><br/>
   <span class="meta">2025年1月 – 2025年4月</span> · <a href="https://arxiv.org/abs/2503.14932" target="_blank" rel="noopener">Paper</a></span>
   <div>通过概率差分方法在边缘设备系统上实现高效的黑盒LLM自适应，同时强有力地保护数据隐私。</div>
   <div class="chips">
@@ -76,19 +76,19 @@
 </div>
 
 <div class="pub-item">
-  <strong>视觉-语言模型引导的不确定性感知跨模态传感器融合</strong><br/>
+  <strong>Calibrating and Rotating: A Unified Framework for Weight Conditioning in PEFT</strong><br/>
   <div class="authors">
-    <b>Y. Li</b>, J. Wang, P. Khargonekar, and M. A. A. Faruque
+    <b>Da Chang</b>, Peng Xue, Yu Li, Yongxiang Liu, Pengxiang Xu, Shixun Zhang
   </div>
-  <span class="meta"><span class="text-blue"><i>WACV 2026</i></span> · <a href="https://github.com/Skylanding/SensorFusion" target="_blank" rel="noopener">代码</a></span>
-  <div>我们的主要工作是构建VLM以改善异常天气条件下的自动驾驶模式，重点改进摄像头-激光雷达分支的多模态融合算法。</div>
+  <span class="meta"><span class="text-blue"><i>AAAI 2026</i></span> · <span class="text-red"><i>CCF A</i></span> · <a href="https://arxiv.org/pdf/2511.00051" target="_blank" rel="noopener">PDF</a> ·<a href="https://github.com/MaeChd/SORA" target="_blank" rel="noopener">代码</a></span>
+  <div>分析DoRA与LoRA的性质，并统一“校准 + 旋转”的权重条件化策略，提升 PEFT 的性能与训练推理效率。</div>
   <div class="chips">
-    <span class="chip">自动驾驶</span><span class="chip">传感器融合</span><span class="chip">视觉-语言模型</span>
+    <span class="chip">LLMs PEFT</span><span class="chip">权重条件化</span>
   </div>
 </div>
 
 <div class="pub-item">
-  <strong>DLoRA-TrOCR: 基于Transformer的混合文本模式光学字符识别</strong><br/>
+  <strong>Mixed Text Recognition with Efficient Parameter Fine-Tuning and Transformer</strong><br/>
   <div class="authors">
     <b>Yu Li*</b>, Chang Da*
   </div>
@@ -103,7 +103,7 @@
 </div>
 
 <div class="pub-item">
-  <strong>基于SAM和Transformer多层特征融合的双分支乳腺超声图像分割</strong><br/>
+  <strong>Dual branch SAM-Transformer Fusion Network for Accurate Breast Ultrasound Image Segmentation</strong><br/>
   <div class="authors">
     <b>Y. Li</b>, J. Huang et al.
   </div>
@@ -115,7 +115,7 @@
 </div>
 
 <div class="pub-item">
-  <strong>SfMDiffusion: 基于扩散模型的内窥镜自监督单目深度估计</strong><br/>
+  <strong>SfMDiffusion: Self-supervised Monocular Depth Estimation in Endoscopy Based on Diffusion Models</strong><br/>
   <div class="authors">
     <b>Y. Li</b>, D. Chang et al.
   </div>
