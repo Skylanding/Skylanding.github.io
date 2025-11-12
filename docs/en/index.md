@@ -87,7 +87,7 @@ My research interests focus on **Generative AI**, **Reinforcement Learning (RL)*
 </div>
 
 <div class="pub-item">
-  <strong>DLoRA-TrOCR: Mixed Text Mode Optical Character Recognition Based On Transformer</strong><br/>
+  <strong>Mixed Text Recognition with Efficient Parameter Fine-Tuning and Transformer</strong><br/>
   <div class="authors">
     <b>Yu Li*</b>, Chang Da*
   </div>
