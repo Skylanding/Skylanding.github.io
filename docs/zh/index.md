@@ -80,7 +80,7 @@
   <div class="authors">
     Da Chang, Peng Xue, <b>Yu Li</b>, Yongxiang Liu, Pengxiang Xu, Shixun Zhang
   </div>
-  <span class="meta"><span class="text-blue"><i>AAAI 2026</i></span> · <a href="https://arxiv.org/pdf/2511.00051" target="_blank" rel="noopener">PDF</a> ·<a href="https://github.com/MaeChd/SORA" target="_blank" rel="noopener">代码</a></span>
+  <span class="meta"><span class="text-blue"><i>AAAI 2026</i></span> · <a href="https://arxiv.org/pdf/2511.00051" target="_blank" rel="noopener">论文</a> ·<a href="https://github.com/MaeChd/SORA" target="_blank" rel="noopener">代码</a></span>
   <div>分析DoRA与LoRA的性质，并统一“校准 + 旋转”的权重条件化策略，提升 PEFT 的性能与训练推理效率。</div>
   <div class="chips">
     <span class="chip">LLMs PEFT</span><span class="chip">权重条件化</span>
@@ -95,7 +95,7 @@
   <div>
   <span class="meta">(*:Equal contribution)</span>
   </div>
-  <span class="meta"><span class="text-blue"><i>ICONIP 2024</i></span></span> · <a href="https://arxiv.org/pdf/2404.12734" target="_blank" rel="noopener">Paper</a> · <a href="https://github.com/MaeChd/DLoRA-TrOCR" target="_blank" rel="noopener">Code</a></span>
+  <span class="meta"><span class="text-blue"><i>ICONIP 2024</i></span></span> · <a href="https://arxiv.org/pdf/2404.12734" target="_blank" rel="noopener">论文</a> · <a href="https://github.com/MaeChd/DLoRA-TrOCR" target="_blank" rel="noopener">代码</a></span>
   <div>基于TrOCR的OCR，采用高效PEFT处理混合文本；实用的流程和评估。</div>
   <div class="chips">
     <span class="chip">OCR</span><span class="chip">LoRA</span>
