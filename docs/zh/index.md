@@ -78,9 +78,9 @@
 <div class="pub-item">
   <strong>Calibrating and Rotating: A Unified Framework for Weight Conditioning in PEFT</strong><br/>
   <div class="authors">
-    <b>Da Chang</b>, Peng Xue, Yu Li, Yongxiang Liu, Pengxiang Xu, Shixun Zhang
+    Da Chang, Peng Xue, <b>Yu Li</b>, Yongxiang Liu, Pengxiang Xu, Shixun Zhang
   </div>
-  <span class="meta"><span class="text-blue"><i>AAAI 2026</i></span> · <span class="text-red"><i>CCF A</i></span> · <a href="https://arxiv.org/pdf/2511.00051" target="_blank" rel="noopener">PDF</a> ·<a href="https://github.com/MaeChd/SORA" target="_blank" rel="noopener">代码</a></span>
+  <span class="meta"><span class="text-blue"><i>AAAI 2026</i></span> · <a href="https://arxiv.org/pdf/2511.00051" target="_blank" rel="noopener">PDF</a> ·<a href="https://github.com/MaeChd/SORA" target="_blank" rel="noopener">代码</a></span>
   <div>分析DoRA与LoRA的性质，并统一“校准 + 旋转”的权重条件化策略，提升 PEFT 的性能与训练推理效率。</div>
   <div class="chips">
     <span class="chip">LLMs PEFT</span><span class="chip">权重条件化</span>
